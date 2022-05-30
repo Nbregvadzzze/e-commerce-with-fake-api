@@ -1,0 +1,23 @@
+{
+  "name": "ecommerceappwithfakeapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamrajabli/eCommerceAppWithFakeApi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamrajabli/eCommerceAppWithFakeApi/issues"
+  },
+  "homepage": "https://github.com/iamrajabli/eCommerceAppWithFakeApi#readme",
+  "devDependencies": {
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
