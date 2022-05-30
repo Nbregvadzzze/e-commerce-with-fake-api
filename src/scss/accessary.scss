@@ -1,0 +1,11 @@
+.container {
+    @include flex-between-center();
+    width: $container-width;
+    margin: 0 auto;
+}
+
+::placeholder {
+    font-size: $font-s;
+    font-family: 'Poppins';
+    color: $first-font-color;
+}
