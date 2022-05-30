@@ -118,7 +118,7 @@ html {
         }
         .main__search {
             @include flex-between-center();
-            border: 2px solid rgb(205, 205, 205);
+            border: 2px solid $border-color;
             width: 510px;
             height: 44px;
             border-radius: 4px;
@@ -168,16 +168,33 @@ html {
             }
         }
         .main__shop {
-            i {
-                margin-left: $margin-xs;
+            a {
+                position: relative;
+                span {
+                    @include flex-center-center();
+                    position: absolute;
+                    top: -7px;
+                    right: -7px;
+                    z-index: 2000;
+                    background-color: #ff675d;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: $font-s !important;
+                    font-weight: $font-weight-400!important;
+                }
+                i {
+                    margin-left: $margin-xs;
+                }
             }
         }
         i {
             font-size: $font-xl;
         }
         .fa-heart {
-            border-right: 1px solid rgb(205, 205, 205);
-            border-left: 1px solid rgb(205, 205, 205);
+            border-right: 1px solid $border-color;
+            border-left: 1px solid $border-color;
             padding: 0 $padding-s;
         }
     }

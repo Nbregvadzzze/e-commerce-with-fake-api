@@ -283,7 +283,34 @@ html {
   margin-right: 0.5rem;
 }
 
-#main .main__right .main__shop i {
+#main .main__right .main__shop a {
+  position: relative;
+}
+
+#main .main__right .main__shop a span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  z-index: 2000;
+  background-color: #ff675d;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.75rem !important;
+  font-weight: 400 !important;
+}
+
+#main .main__right .main__shop a i {
   margin-left: 0.5rem;
 }
 
