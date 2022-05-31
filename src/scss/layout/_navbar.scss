@@ -3,6 +3,7 @@
     // GENERAL SETTINGS
     .navbar__left,
     .navbar__right {
+        z-index: 822000;
         >ul {
             @include flex-between-center();
             gap: $gap-xl;
