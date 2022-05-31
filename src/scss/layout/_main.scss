@@ -1,6 +1,7 @@
 // SECTION [MAIN]
 #main {
     padding: $padding-m 0;
+    z-index: 9999999;
     .main__left {
         @include flex-between-center();
         gap: $gap-xxxl;

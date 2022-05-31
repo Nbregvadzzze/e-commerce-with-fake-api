@@ -1,0 +1,105 @@
+#top {
+    margin-top: $margin-xxxl;
+    margin-bottom: 100px;
+    .container:first-child {
+        justify-content: center !important;
+        h1 {
+            margin-bottom: $margin-xl;
+            font: {
+                size: $font-l;
+                weight: $font-weight-700;
+            }
+        }
+    }
+    .container:last-child {
+        @include flex-between-start();
+        height: 580px;
+        .top__left {
+            width: 580px;
+            position: relative;
+            height: 100%;
+            &::after {
+                @include wrapper();
+            }
+            &:hover:after {
+                visibility: visible;
+                opacity: 1;
+            }
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                border-radius: 3px;
+            }
+            .top__header {
+                position: absolute;
+                top: 5%;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                h1 {
+                    text-transform: uppercase;
+                    font: {
+                        size: $font-l;
+                        weight: $font-weight-600;
+                    }
+                }
+                h3 {
+                    color: $first-font-color;
+                    font-size: $font-m;
+                    margin-top: $margin-xs;
+                }
+            }
+        }
+        .top__right {
+            width: 580px;
+            height: 100%;
+            @include flex-between-center();
+            flex-direction: column !important;
+            .top__right-item {
+                position: relative;
+                height: 280px;
+                &::after {
+                    @include wrapper();
+                }
+                &:hover:after {
+                    opacity: 1;
+                }
+                &:hover i {
+                    opacity: 1;
+                    margin-left: 10px;
+                }
+                &:hover a {
+                    background-color: rgba(0, 0, 0, .8);
+                    color: $white;
+                }
+            }
+            img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover;
+                border-radius: 3px;
+            }
+            .top__btn {
+                i {
+                    margin-left: -10px;
+                    transition: $transition-200ms;
+                    opacity: 0;
+                    color: white;
+                }
+            }
+        }
+        .top__btn {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 822000;
+            @include flex-start-center();
+        }
+        a {
+            margin-right: $margin-s;
+            font-size: $font-sm
+        }
+    }
+}
