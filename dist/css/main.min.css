@@ -1473,4 +1473,20 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
+
+#featured {
+  margin-top: 5rem;
+}
+
+#featured .container:first-child {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+}
+
+#featured .container:first-child h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 /*# sourceMappingURL=main.min.css.map */
