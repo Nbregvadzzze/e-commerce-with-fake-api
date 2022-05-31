@@ -1,0 +1,5 @@
+.container {
+    @include flex-between-center();
+    width: $container-width;
+    margin: 0 auto;
+}
