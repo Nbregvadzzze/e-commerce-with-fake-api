@@ -1,0 +1,91 @@
+// SECTION [HEADER]
+#header {
+    width: 100%;
+    font-size: $font-s;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding: $padding-xs 0;
+    color: $first-font-color;
+    .header__right {
+        .header__dropdown {
+            @include flex-between-center();
+            padding-right: $padding;
+            gap: $gap;
+            span {
+                position: relative;
+                padding: $padding-xs 0;
+                cursor: pointer;
+                &:hover {
+                    color: $second-font-color;
+                }
+                .dropdown {
+                    position: absolute;
+                    width: 100%;
+                    height: 50px;
+                    content: '';
+                    top: 80%;
+                    opacity: 0;
+                    left: 0;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0 2px 15px 0 rgb(185, 184, 184);
+                    padding: $padding-xs;
+                    box-sizing: border-box;
+                    transition: $transition-200ms;
+                    a {
+                        text-decoration: none;
+                        color: $first-font-color;
+                        margin-bottom: $margin-xs;
+                        display: inline-block;
+                        transition: $transition-200ms;
+                        &:hover {
+                            color: $second-font-color;
+                        }
+                    }
+                }
+            }
+            i {
+                margin-left: $margin-xxs;
+                font-size: $font-s;
+            }
+            span:first-child {
+                &:hover .dropdown {
+                    top: 100%;
+                    opacity: 1;
+                }
+            }
+            span:last-child {
+                &:hover .dropdown {
+                    top: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+        @include flex-between-center();
+        .header__details ul {
+            display: $flex;
+            gap: $gap-l;
+            border-left: 1px solid rgb(219, 219, 219);
+            padding-left: $padding;
+            color: $first-font-color;
+            transition: $transition-200ms;
+            li {
+                @include flex-start-center();
+                &:hover a {
+                    color: $second-font-color;
+                }
+                &:hover i {
+                    color: $second-font-color;
+                }
+            }
+            a {
+                color: $first-font-color;
+                text-decoration: none;
+                transition: $transition-200ms;
+            }
+            i {
+                margin-right: $margin-xs;
+                transition: $transition-200ms;
+                font-size: $size;
+            }
+        }
+    }
+}

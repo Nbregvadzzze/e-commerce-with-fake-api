@@ -1,0 +1,95 @@
+// SECTION [MAIN]
+#main {
+    padding: $padding-m 0;
+    .main__left {
+        @include flex-between-center();
+        gap: $gap-xxxl;
+        .main__logo {
+            img {
+                width: 153px;
+                height: 44px;
+            }
+        }
+        .main__search {
+            @include flex-between-center();
+            border: 2px solid $border-color;
+            width: 510px;
+            height: 44px;
+            border-radius: 4px;
+            input {
+                width: 90%;
+                height: 100%;
+                box-sizing: border-box;
+                padding-left: $padding-s;
+                outline: none;
+                border: none;
+                color: $first-font-color;
+                font: {
+                    size: $font-s;
+                    family: $font-family;
+                }
+            }
+            i {
+                font-size: $font-m;
+                margin-right: $margin-s;
+                cursor: pointer;
+            }
+        }
+    }
+    .main__right {
+        @include flex-between-center();
+        height: 44px;
+        gap: $gap;
+        a {
+            color: $second-font-color;
+        }
+        .main__call,
+        .main__shop {
+            @include flex-between-center();
+            line-height: $line-m;
+            span {
+                display: block;
+                font-size: $font-s;
+            }
+            span:last-child {
+                font-weight: $font-weight-600;
+                font-size: $font-sm;
+            }
+        }
+        .main__call {
+            i {
+                margin-right: $margin-xs;
+            }
+        }
+        .main__shop {
+            a {
+                position: relative;
+                span {
+                    @include flex-center-center();
+                    position: absolute;
+                    top: -7px;
+                    right: -7px;
+                    z-index: 2000;
+                    background-color: #ff675d;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: $font-s !important;
+                    font-weight: $font-weight-400!important;
+                }
+                i {
+                    margin-left: $margin-xs;
+                }
+            }
+        }
+        i {
+            font-size: $font-xl;
+        }
+        .fa-heart {
+            border-right: 1px solid $border-color;
+            border-left: 1px solid $border-color;
+            padding: 0 $padding-s;
+        }
+    }
+}
