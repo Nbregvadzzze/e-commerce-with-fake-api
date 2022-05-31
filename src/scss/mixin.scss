@@ -1,16 +1,29 @@
 @mixin flex-between-center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
 }
 
 @mixin flex-start-center {
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
 }
 
 @mixin flex-center-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+@mixin line {
+    position: absolute !important;
+    width: 100% !important;
+    height: 2px !important;
+    background-color: black !important;
+    content: '' !important;
+    top: 67% !important;
+    left: 0 !important;
+    transform: scale(0) !important;
+    transition: $transition-200ms !important;
 }

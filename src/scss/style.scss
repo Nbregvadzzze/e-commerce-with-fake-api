@@ -202,27 +202,48 @@ html {
 
 // SECTION [NAVBAR]
 #navbar {
-    .navbar__left {
-        ul {
-            li {
+    // GENERAL SETTINGS
+    .navbar__left,
+    .navbar__right {
+        >ul {
+            @include flex-between-center();
+            gap: $gap-xl;
+            font-size: $font-sm;
+            >li {
+                @include flex-center-center();
                 padding: $padding-m 0;
+                cursor: pointer;
+                >a {
+                    text-decoration: none;
+                    color: $second-font-color;
+                    font-weight: $font-weight-700;
+                }
+            }
+            .fa-percent {
+                margin-right: $margin-s;
+                font-size: $font-m;
+            }
+        }
+    }
+    // MENU 
+    .navbar__left {
+        // MENU &  DROPDOWN 117PX & DROPDOWN 250PX & DROPDOWN 940PX
+        >ul {
+            >li {
                 position: relative;
                 &::after {
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: black;
-                    content: '';
-                    top: 67%;
-                    left: 0;
-                    transform: scale(0);
-                    transition: $transition-200ms;
+                    @include line();
                 }
                 &:hover:after {
-                    transform: scale(1);
+                    transform: scale(1) !important;
                 }
-                &:hover i {
+                &:hover>i {
                     transform: rotate(180deg)
+                }
+                &:hover .navbar__dropdown {
+                    visibility: visible;
+                    top: 100%;
+                    opacity: 1;
                 }
                 i {
                     margin-left: $margin-xs;
@@ -230,23 +251,179 @@ html {
                     transition: $transition-200ms;
                 }
             }
-        }
-    }
-    ul {
-        @include flex-between-center();
-        gap: $gap-xl;
-        font-size: $font-sm;
-        font-weight: $font-weight-700;
-        li {
-            @include flex-center-center();
-            a {
-                text-decoration: none;
-                color: $second-font-color;
+            >li:first-child {
+                &::after {
+                    transform: scale(1) !important;
+                }
             }
-        }
-        .fa-percent {
-            margin-right: $margin-s;
-            font-size: $font-m;
+            // DROPDOWN 117PX [ADDED JS CODES]
+            .elements {
+                .navbar__dropdown {
+                    @include flex-start-center();
+                    width: $container-width;
+                    height: 400px;
+                    .navbar__dropdown-item {
+                        position: relative;
+                        margin-right: $margin-xxxl;
+                    }
+                }
+            }
+            // DROPDOWN 250PX
+            .pages,
+            .blog {
+                .navbar__dropdown {
+                    width: 250px !important;
+                    max-height: 320px !important;
+                    .navbar__dropdown-item {
+                        margin: $margin-l !important;
+                        width: inherit;
+                        li {
+                            position: relative;
+                            .navbar__dropdown {
+                                position: absolute !important;
+                                left: calc(100% + 25px);
+                                top: 0;
+                                transition: $transition-200ms;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            &:hover>.navbar__dropdown {
+                                left: calc(100% + 35px);
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                            &:hover>i {
+                                box-sizing: border-box;
+                                transform: rotate(90deg);
+                            }
+                        }
+                        li:not(:last-child) {
+                            margin-bottom: $margin-l
+                        }
+                        i {
+                            color: $first-font-color;
+                            transition: $transition-200ms;
+                        }
+                    }
+                }
+            }
+            // DROPDOWN 940PX
+            .navbar__dropdown {
+                @include flex-between-center();
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.14);
+                position: absolute;
+                top: 80%;
+                left: 0;
+                width: 940px;
+                background-color: white;
+                transition: $transition-200ms;
+                opacity: 0;
+                visibility: hidden;
+                h3 {
+                    text-transform: uppercase;
+                    margin-bottom: $margin;
+                    font: {
+                        weight: $font-weight-600;
+                        size: $size;
+                    }
+                }
+                .navbar__dropdown-item:first-child {
+                    margin-left: $margin-xl
+                }
+                .navbar__dropdown-item:last-child {
+                    position: relative;
+                    padding: 10px 10px 10px 0;
+                    box-sizing: border-box;
+                }
+                li:not(:last-child) {
+                    margin-bottom: $margin
+                }
+                li {
+                    @include flex-between-center();
+                    a {
+                        text-decoration: none;
+                        color: $first-font-color;
+                        font-weight: $font-weight-400;
+                        font-size: $size;
+                        transition: $transition-200ms;
+                        &:hover {
+                            color: $second-font-color
+                        }
+                    }
+                }
+                img {
+                    width: 230px;
+                    height: 400px;
+                    object-fit: cover;
+                }
+                .navbar__sale {
+                    position: absolute;
+                    bottom: 40%;
+                    left: 8%;
+                    h1 {
+                        font: {
+                            size: $font-xxl;
+                            weight: $font-weight-700;
+                        }
+                    }
+                    .navbar__sale-content {
+                        display: $flex;
+                        position: relative;
+                        margin-bottom: $margin-m;
+                        span {
+                            transform: rotate(270deg);
+                            margin-left: $margin-xxs;
+                            font: {
+                                weight: $font-weight-600;
+                                size: $font-s
+                            }
+                        }
+                        #salePercent {
+                            margin-left: -25px;
+                        }
+                    }
+                    a {
+                        @include flex-start-center();
+                        width: 130px;
+                        position: relative;
+                        color: $second-font-color;
+                        text-decoration: none;
+                        &::after {
+                            @include line();
+                            margin-top: $margin-xs;
+                        }
+                        &:hover:after {
+                            transform: scale(1) !important;
+                        }
+                        font: {
+                            weight: $font-weight-500;
+                            size: $font-m;
+                        }
+                    }
+                }
+                .navbar__info {
+                    position: absolute;
+                    bottom: 15%;
+                    left: 25%;
+                    transform: translateX(-25%);
+                    text-align: center;
+                    h1 {
+                        color: white;
+                        margin-bottom: $margin-xs;
+                        font: {
+                            size: $font-xl;
+                            weight: $font-weight-600;
+                        }
+                    }
+                    h3 {
+                        color: white;
+                        font: {
+                            size: $font-m;
+                            weight: $font-weight-600;
+                        }
+                    }
+                }
+            }
         }
     }
 }
