@@ -1,0 +1,118 @@
+.card__container {
+    @include flex-start-center();
+    flex-wrap: wrap;
+    gap: 20px;
+    width: $container-width;
+    margin: 0 auto;
+    .card__item {
+        color: $first-font-color;
+        margin-bottom: $margin-xl;
+        .card__img {
+            width: 277.5px;
+            height: 315px;
+            position: relative;
+            &:hover .card__quick,
+            &:hover .card__icons {
+                opacity: 1;
+            }
+            img {
+                border-radius: 3px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .card__quick {
+                @include flex-center-center();
+                opacity: 0;
+                transition: $transition-200ms;
+                cursor: pointer;
+                font: {
+                    size: $font-sm;
+                    weight: $font-weight-700;
+                }
+                text-transform: uppercase;
+                color: white;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                background-color: rgba(0, 0, 0, .6);
+            }
+            .card__icons {
+                position: absolute;
+                top: 5%;
+                right: 5%;
+                opacity: 0;
+                transition: $transition-200ms;
+                i {
+                    @include flex-center-center();
+                    cursor: pointer;
+                    margin-bottom: $margin-xs;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: $white;
+                    border: 1px solid rgb(211, 211, 211);
+                    transition: $transition-200ms;
+                    &:hover {
+                        background-color: black;
+                        color: $white;
+                    }
+                }
+            }
+            .card__info-card {
+                @include flex-center-center();
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                padding: $padding-xxs $padding;
+                color: $white;
+                text-transform: uppercase;
+                border-radius: 2px;
+                font: {
+                    weight: $font-weight-600;
+                    size: $font-s;
+                }
+            }
+            .card__info-card.black {
+                background-color: $black;
+            }
+            .card__info-card.pink {
+                background-color: $pink;
+            }
+        }
+        .card__category {
+            margin-top: $margin;
+            text-transform: uppercase;
+            font-size: $font-s;
+        }
+        .card__name {
+            margin-top: $margin-xs;
+            font-size: $font-sm;
+        }
+        .card__price {
+            @include flex-start-center();
+            font-weight: $font-weight-600;
+            margin: $margin-s 0;
+            .card__new {
+                color: $black;
+                margin-right: $margin-s;
+            }
+            .card__old {
+                text-decoration: line-through;
+            }
+        }
+        .card__review {
+            @include flex-start-center();
+            font-size: $font-s;
+            color: rgb(209, 209, 209);
+            .card__rev-icons {
+                margin-right: $margin-s;
+            }
+            .fa-star.pink {
+                color: $pink;
+            }
+        }
+    }
+}
