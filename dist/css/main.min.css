@@ -1224,12 +1224,19 @@ html {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  text-align: center;
 }
 
 #best .container:first-child h1 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+#best .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
 }
 
 #top {
@@ -1240,12 +1247,19 @@ html {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  text-align: center;
 }
 
 #top .container:first-child h1 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+#top .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
 }
 
 #top .container:last-child {
@@ -1500,12 +1514,19 @@ html {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  text-align: center;
 }
 
 #featured .container:first-child h1 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+#featured .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
 }
 
 #guaranty {
@@ -1628,12 +1649,19 @@ html {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  text-align: center;
 }
 
 #instagram .container:first-child h1 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+#instagram .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
 }
 
 #footer {
@@ -2065,12 +2093,19 @@ html {
   -webkit-box-pack: center !important;
       -ms-flex-pack: center !important;
           justify-content: center !important;
+  text-align: center;
 }
 
 #store .container:first-child h1 {
   margin-bottom: 2rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+#store .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
 }
 
 #store .soc__container .soc__item {
@@ -2271,5 +2306,60 @@ html {
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#team {
+  margin: 5rem 0;
+}
+
+#team .container:first-child {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  text-align: center;
+}
+
+#team .container:first-child h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#team .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
+}
+
+#team .soc__container .team__item {
+  text-align: center;
+}
+
+#team .soc__container .team__item .soc__item {
+  width: 280px;
+  height: 280px;
+}
+
+#team .soc__container .team__item .soc__item img {
+  width: 280px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#team .soc__container .team__item .team__name {
+  margin-top: 16px;
+}
+
+#team .soc__container .team__item .team__name h1 {
+  color: #333;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+#team .soc__container .team__item .team__name h4 {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
 /*# sourceMappingURL=main.min.css.map */

@@ -60,12 +60,18 @@
 
 @mixin center {
     justify-content: center !important;
+    text-align: center;
     h1 {
         margin-bottom: $margin-xl;
         font: {
             size: $font-l;
             weight: $font-weight-700;
         }
+    }
+    h3 {
+        font-size: $font-m;
+        margin-bottom: $margin-m;
+        color: $first-font-color;
     }
 }
 

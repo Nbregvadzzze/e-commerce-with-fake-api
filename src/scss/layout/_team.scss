@@ -1,0 +1,35 @@
+#team {
+    margin: $margin-xxxl 0;
+    .container:first-child {
+        @include center();
+    }
+    .soc__container {
+        .team__item {
+            text-align: center;
+            .soc__item {
+                width: 280px;
+                height: 280px;
+                img {
+                    width: 280px;
+                    height: 280px;
+                    object-fit: cover;
+                }
+            }
+            .team__name {
+                margin-top: $margin;
+                h1 {
+                    color: #333;
+                    font: {
+                        weight: $font-weight-700;
+                        size: $font-sm;
+                    }
+                }
+                h4 {
+                    font-size: $font-s;
+                    color: #666;
+                    margin-top: $margin-xs;
+                }
+            }
+        }
+    }
+}
