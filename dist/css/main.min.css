@@ -1804,20 +1804,20 @@ html {
   font-size: 0.85rem;
 }
 
-#contact__banner .contact__banner-container {
+#page__banner .page__banner-container {
   width: 100%;
   height: 302px;
   position: relative;
 }
 
-#contact__banner .contact__banner-container img {
+#page__banner .page__banner-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#contact__banner .contact__banner-container h1 {
+#page__banner .page__banner-container h1 {
   position: absolute;
   top: 50%;
   left: 50%;
