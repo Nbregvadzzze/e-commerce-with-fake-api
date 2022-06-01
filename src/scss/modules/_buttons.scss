@@ -36,3 +36,17 @@
         color: $white;
     }
 }
+
+.btn.btn-rounded {
+    padding: $padding $padding-xxl;
+    font-weight: $font-weight-600;
+    background-color: #26c;
+    color: $white;
+    border-radius: 3px;
+    transition: $transition-200ms;
+    display: inline-block;
+    text-transform: uppercase;
+    &:hover {
+        background-color: rgb(79, 130, 206);
+    }
+}

@@ -1,0 +1,34 @@
+#error {
+    background-color: $error-bg;
+    height: 700px;
+    .error__container {
+        @include flex-center-center();
+        height: 100%;
+        .error__content {
+            text-align: center;
+            h1 {
+                margin-bottom: $margin-s;
+                font: {
+                    weight: $font-weight-600;
+                    size: $font-xl;
+                }
+            }
+            h2 {
+                margin-top: $margin-l;
+                font: {
+                    weight: $font-weight-600;
+                    size: $font-m;
+                }
+            }
+            span {
+                font-size: $font-s;
+                color: #999!important;
+                display: block;
+                margin: $margin-s 0 $margin-m 0;
+            }
+            a {
+                font-size: $font-sm;
+            }
+        }
+    }
+}
