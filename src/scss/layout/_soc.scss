@@ -1,0 +1,48 @@
+.soc__container {
+    @include flex-start-center();
+    width: $container-width;
+    margin: 0 auto;
+    gap: 17.5px;
+    .soc__item {
+        width: 220px;
+        height: 220px;
+        position: relative;
+        border-radius: 3px;
+        overflow: hidden;
+        cursor: pointer;
+        &::after {
+            @include wrapper();
+        }
+        &:hover:after {
+            background-color: rgba(0, 0, 0, .5);
+        }
+        &:hover i {
+            transform: rotate(0deg);
+            top: calc(50% - 16px);
+            left: calc(50% - 14px);
+            font-size: $font-xl;
+            opacity: 1;
+        }
+        &:hover img {
+            transform: scale(1.2);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 3px;
+            transition: $transition-200ms;
+        }
+        i {
+            position: absolute;
+            top: calc(50% - 30px);
+            left: calc(50% - 30px);
+            font-size: $font-xxd;
+            color: $white;
+            z-index: 822000;
+            transition: $transition-200ms;
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+    }
+}

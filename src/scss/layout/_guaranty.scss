@@ -1,6 +1,5 @@
 #guaranty {
     margin-top: $margin-xxl;
-    margin-bottom: $margin-xxl;
     .container {
         @include flex-around-center();
         border-top: 1px solid rgb(221, 221, 221);

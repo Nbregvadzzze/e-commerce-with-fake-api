@@ -21,8 +21,7 @@
                 @include wrapper();
             }
             &:hover:after {
-                visibility: visible;
-                opacity: 1;
+                background-color: rgba(0, 0, 0, .2);
             }
             img {
                 width: 100% !important;
@@ -62,7 +61,7 @@
                     @include wrapper();
                 }
                 &:hover:after {
-                    opacity: 1;
+                    background-color: rgba(0, 0, 0, .2);
                 }
                 &:hover i {
                     opacity: 1;
