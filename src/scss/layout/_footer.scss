@@ -1,0 +1,92 @@
+#footer {
+    background-color: $footer-bg;
+    .flex__container {
+        width: $container-width;
+        margin: 0 auto;
+        color: rgb(184, 184, 184);
+        font-size: $font-sm;
+        a {
+            color: rgb(184, 184, 184);
+            text-decoration: none;
+            transition: $transition-200ms;
+            &:hover {
+                color: $white;
+            }
+        }
+        h1 {
+            font: {
+                weight: $font-weight-600;
+                size: $size;
+            }
+            color: $white;
+            margin-bottom: $margin-xl;
+        }
+        li {
+            margin-bottom: $margin-m;
+        }
+        p {
+            line-height: $line-l;
+            margin-bottom: $margin-l;
+        }
+    }
+    .footer__top {
+        padding: $padding-xxxl 0 $padding-xxl 0;
+        border-bottom: 1px solid rgb(82, 82, 82);
+        img {
+            width: 150px;
+            height: 43px;
+            margin-bottom: $margin-s;
+        }
+    }
+    .footer__bottom {
+        margin-top: $margin-xl;
+        img {
+            width: 159px;
+            height: 29px;
+        }
+        .footer__item {
+            width: calc(1170px / 3);
+        }
+        .footer__item:nth-child(2) {
+            text-align: center
+        }
+        .footer__item:last-child {
+            text-align: right;
+            @include flex-end-start();
+            i {
+                @include flex-center-center();
+                width: 30px;
+                height: 30px;
+                border: 1px solid rgb(82, 82, 82);
+                border-radius: 50%;
+                font-size: $size;
+                margin-left: $margin;
+                transition: $transition-200ms;
+            }
+            .fa-instagram {
+                &:hover {
+                    background-color: #fb3958;
+                }
+            }
+            .fa-facebook {
+                &:hover {
+                    background-color: #2150ad;
+                }
+            }
+            .fa-twitter {
+                &:hover {
+                    background-color: #26a7de;
+                }
+            }
+        }
+    }
+    .footer__top,
+    .footer__bottom {
+        display: $flex;
+        gap: $gap-xxxxl;
+    }
+    .footer__item:first-child {
+        width: 292.5px;
+    }
+    .footer__item {}
+}

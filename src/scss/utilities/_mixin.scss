@@ -28,6 +28,12 @@
     align-items: flex-start !important;
 }
 
+@mixin flex-end-start {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+}
+
 @mixin line {
     position: absolute !important;
     width: 100% !important;
