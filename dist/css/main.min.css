@@ -1817,15 +1817,34 @@ html {
      object-fit: cover;
 }
 
-#page__banner .page__banner-container h1 {
+#page__banner .page__banner-container .page__banner-content {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#page__banner .page__banner-container .page__banner-content h1 {
   color: white;
+  margin: 1.25rem 0;
   font-size: 2.5rem;
   font-weight: 900;
+}
+
+#page__banner .page__banner-container .page__banner-content h3 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+#page__banner .page__banner-container .page__banner-content p {
+  line-height: 1.25rem;
+  width: 400px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 #site__nav {
