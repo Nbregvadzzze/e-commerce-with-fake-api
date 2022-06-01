@@ -1,6 +1,5 @@
 #contact__form {
     margin-top: $margin-xxxl;
-    margin-bottom: $margin-xxxl; // sil bunu 
     .contact__form-container {
         @include flex-between-start();
         width: $container-width;

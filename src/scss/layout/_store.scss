@@ -1,0 +1,16 @@
+#store {
+    margin: $margin-xxxl 0;
+    .container:first-child {
+        @include center();
+    }
+    .soc__container {
+        .soc__item {
+            width: 280px;
+            height: 280px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

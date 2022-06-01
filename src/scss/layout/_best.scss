@@ -1,13 +1,6 @@
 #best {
     margin-top: $margin-xxxl;
     .container:first-child {
-        justify-content: center !important;
-        h1 {
-            margin-bottom: $margin-xl;
-            font: {
-                size: $font-l;
-                weight: $font-weight-700;
-            }
-        }
+        @include center();
     }
 }

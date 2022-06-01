@@ -1,14 +1,6 @@
 #instagram {
-    margin-bottom: 100px;
-    margin-top: $margin-xxxl;
+    margin: $margin-xxxl 0;
     .container:first-child {
-        justify-content: center !important;
-        h1 {
-            margin-bottom: $margin-xl;
-            font: {
-                size: $font-l;
-                weight: $font-weight-700;
-            }
-        }
+        @include center();
     }
 }

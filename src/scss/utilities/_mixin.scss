@@ -52,6 +52,17 @@
     transition: $transition-200ms !important;
 }
 
+@mixin center {
+    justify-content: center !important;
+    h1 {
+        margin-bottom: $margin-xl;
+        font: {
+            size: $font-l;
+            weight: $font-weight-700;
+        }
+    }
+}
+
 @mixin wrapper {
     position: absolute;
     width: 100%;
