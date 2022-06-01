@@ -2118,7 +2118,8 @@ html {
 
 #provide .provide__content h1 {
   margin-bottom: 1.25rem;
-  font-size: 1.5rem;
+  color: #222;
+  font-size: 26px;
   font-weight: 700;
 }
 
@@ -2147,5 +2148,65 @@ html {
   margin-bottom: 16px;
   font-size: 1.25rem;
   font-weight: 700;
+}
+
+#customer {
+  height: 507px;
+  margin-bottom: 5rem;
+}
+
+#customer .customer__item {
+  width: 580px;
+  height: 100%;
+  border-radius: 7px;
+}
+
+#customer .customer__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+}
+
+#customer .customer__content {
+  width: 500px;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#customer .customer__content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
+}
+
+#customer .customer__content h1 {
+  margin-bottom: 1.25rem;
+  color: #222;
+  width: 400px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+#customer .customer__content p {
+  width: 440px;
+  font-size: 14px;
+  color: #999 !important;
+  line-height: 1.5rem;
+}
+
+#customer .customer__content a {
+  color: black;
+  display: inline-block;
+  margin-top: 3rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+#customer .customer__content a::after {
+  height: 2px !important;
+  margin-top: 3px;
 }
 /*# sourceMappingURL=main.min.css.map */
