@@ -1,0 +1,26 @@
+#site__nav {
+    padding: $padding 0;
+    border-top: 1px solid rgb(223, 223, 223);
+    .site__nav-container {
+        @include flex-start-center();
+        width: $container-width;
+        margin: 0 auto;
+        a {
+            color: #666;
+            text-decoration: none;
+            font-size: $font-s;
+        }
+        .site__nav-item {
+            a {
+                @include flex-center-center();
+                gap: $gap-xs;
+                margin-left: $margin-xs;
+                font-size: $font-sm;
+                i {
+                    font-size: $font-s;
+                    color: rgb(150, 150, 150);
+                }
+            }
+        }
+    }
+}

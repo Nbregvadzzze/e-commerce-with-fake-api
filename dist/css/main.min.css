@@ -1812,4 +1812,49 @@ html {
   font-size: 2.5rem;
   font-weight: 900;
 }
+
+#site__nav {
+  padding: 16px 0;
+  border-top: 1px solid #dfdfdf;
+}
+
+#site__nav .site__nav-container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+#site__nav .site__nav-container a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.75rem;
+}
+
+#site__nav .site__nav-container .site__nav-item a {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  gap: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+}
+
+#site__nav .site__nav-container .site__nav-item a i {
+  font-size: 0.75rem;
+  color: #969696;
+}
 /*# sourceMappingURL=main.min.css.map */
