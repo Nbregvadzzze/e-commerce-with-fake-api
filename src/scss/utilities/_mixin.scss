@@ -40,6 +40,12 @@
     align-items: stretch;
 }
 
+@mixin flex-center-stretch {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
 @mixin line {
     position: absolute !important;
     width: 100% !important;

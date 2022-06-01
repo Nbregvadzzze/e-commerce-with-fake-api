@@ -1,0 +1,36 @@
+#brands {
+    @include flex-center-stretch();
+    flex-direction: column;
+    height: 428px;
+    background-color: #F6F7F9;
+    .container:first-child {
+        justify-content: center !important;
+        text-align: center;
+        h1 {
+            margin-bottom: $margin-xl;
+            font: {
+                size: $font-l;
+                weight: $font-weight-700;
+            }
+        }
+        h3 {
+            font-size: $font-m;
+            margin-bottom: $margin-m;
+            color: $first-font-color;
+        }
+    }
+    .brands__item {
+        @include flex-center-center();
+        border-radius: 7px;
+        width: 180px;
+        height: 142px;
+        box-shadow: 4px 4px 30px 2px rgba(211, 215, 217, .5);
+        background-color: white;
+        img {
+            border-radius: 7px;
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+    }
+}
