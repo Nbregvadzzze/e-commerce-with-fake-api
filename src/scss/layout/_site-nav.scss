@@ -16,6 +16,10 @@
                 gap: $gap-xs;
                 margin-left: $margin-xs;
                 font-size: $font-sm;
+                transition: $transition-200ms;
+                &:hover {
+                    color: $black;
+                }
                 i {
                     font-size: $font-s;
                     color: rgb(150, 150, 150);

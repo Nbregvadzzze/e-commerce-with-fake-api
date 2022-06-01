@@ -1,0 +1,88 @@
+#contact__form {
+    margin-top: $margin-xxxl;
+    margin-bottom: $margin-xxxl; // sil bunu 
+    .contact__form-container {
+        @include flex-between-start();
+        width: $container-width;
+        margin: 0 auto;
+        span {
+            color: #666;
+            margin-bottom: $margin-xs;
+            display: block;
+            font: {
+                size: $font-sm;
+                weight: $font-weight-400
+            }
+        }
+    }
+    .contact__form-left {
+        background-color: #f6f7f9;
+        width: 290px;
+        padding: $padding-xl;
+        box-sizing: border-box;
+        .contact__form-left-item {
+            margin-bottom: $margin-xl;
+            h1 {
+                margin-bottom: $margin-m;
+                font: {
+                    size: $font-m;
+                    weight: $font-weight-600
+                }
+            }
+        }
+    }
+    .contact__form-right {
+        @include flex-between-stretch();
+        flex-direction: column;
+        width: 848px;
+        min-height: 385.5px;
+        .contact__form-right-header {
+            margin-bottom: $margin-l;
+            h1 {
+                margin-bottom: $margin-xs;
+                font: {
+                    size: $font-l;
+                    weight: $font-weight-700;
+                }
+            }
+        }
+        form {
+            textarea {
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                min-width: 100%;
+                min-height: 170px;
+                box-sizing: border-box;
+                outline: none;
+                border: 1px solid rgb(216, 216, 216);
+                padding: $padding-xs 0 0 $padding;
+                font-size: $font-sm;
+                box-sizing: border-box;
+            }
+            div {
+                width: 100%;
+                margin-top: $margin;
+                @include flex-between-start();
+                input {
+                    width: 49%;
+                    height: 45px;
+                    box-sizing: border-box;
+                    outline: none;
+                    border: 1px solid rgb(216, 216, 216);
+                    padding-left: $padding;
+                    &::placeholder {
+                        @include flex-start-center();
+                    }
+                }
+            }
+            a {
+                margin-top: $margin-m;
+                i {
+                    font-size: $font-sm;
+                    margin-left: $margin-s;
+                }
+            }
+        }
+    }
+}
