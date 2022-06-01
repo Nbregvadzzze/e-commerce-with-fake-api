@@ -1,0 +1,107 @@
+#categories {
+    margin: $margin-xl 0;
+    .categories__container {
+        @include flex-between-start();
+        width: $container-width;
+        margin: 0 auto;
+        .categories__left {
+            width: 260px;
+            .categories__left-item {
+                border-bottom: 2px solid rgb(199, 199, 199);
+                i {
+                    font-size: $font-sm;
+                    color: #666;
+                    cursor: pointer;
+                }
+                h1 {
+                    @include flex-between-center();
+                    margin-bottom: $margin-xl;
+                    font: {
+                        size: 18px;
+                        weight: $font-weight-600;
+                    }
+                }
+                >ul {
+                    padding-bottom: $padding-xl;
+                    >li:not(:last-child) {
+                        margin-bottom: $margin;
+                        padding-bottom: $padding;
+                        border-bottom: 1px solid rgb(221, 221, 221);
+                    }
+                    >li {
+                        color: $first-font-color;
+                        text-decoration: none;
+                        font-size: $font-sm;
+                        transition: $transition-200ms;
+                        >input {
+                            margin-right: $margin-xs;
+                        }
+                        &:hover a {
+                            color: $black;
+                        }
+                        &:hover i {
+                            color: $black;
+                        }
+                        a {
+                            @include flex-between-center();
+                            color: $first-font-color;
+                            text-decoration: none;
+                            font-size: $font-sm;
+                            transition: $transition-200ms;
+                        }
+                        .cat__dropdown {
+                            margin: $margin-l $margin-l 0 $margin-l;
+                            border-left: 1px solid rgb(221, 221, 221);
+                            transition: $transition-200ms;
+                            li {
+                                padding: $padding 0 $padding $padding;
+                                a {
+                                    color: $first-font-color;
+                                    text-decoration: none;
+                                    font-size: $font-sm;
+                                    transition: $transition-200ms;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .categories__left-item:not(:first-child) {
+                margin-top: $margin-xl;
+            }
+        }
+        .categories__right {
+            width: 873px;
+            .categories__sort {
+                @include flex-between-start();
+                margin-bottom: $margin;
+                select {
+                    padding: $padding-s;
+                    outline: none;
+                }
+                span {
+                    text-transform: uppercase;
+                    font: {
+                        weight: $font-weight-500;
+                        size: $font-sm
+                    }
+                }
+                i {
+                    margin-left: $margin-s;
+                    font-size: $font-m;
+                    transition: $transition-200ms;
+                    cursor: pointer;
+                }
+                i:last-child {
+                    opacity: .5;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+            .card__container {
+                width: 100%;
+            }
+        }
+    }
+}

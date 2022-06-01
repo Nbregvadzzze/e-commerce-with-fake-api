@@ -2362,4 +2362,169 @@ html {
   color: #666;
   margin-top: 0.5rem;
 }
+
+#categories {
+  margin: 2rem 0;
+}
+
+#categories .categories__container {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+#categories .categories__container .categories__left {
+  width: 260px;
+}
+
+#categories .categories__container .categories__left .categories__left-item {
+  border-bottom: 2px solid #c7c7c7;
+}
+
+#categories .categories__container .categories__left .categories__left-item i {
+  font-size: 0.85rem;
+  color: #666;
+  cursor: pointer;
+}
+
+#categories .categories__container .categories__left .categories__left-item h1 {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin-bottom: 2rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul {
+  padding-bottom: 2rem;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li:not(:last-child) {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dddddd;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li > input {
+  margin-right: 0.5rem;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li:hover a {
+  color: black;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li:hover i {
+  color: black;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li a {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li .cat__dropdown {
+  margin: 1.5rem 1.5rem 0 1.5rem;
+  border-left: 1px solid #dddddd;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li .cat__dropdown li {
+  padding: 16px 0 16px 16px;
+}
+
+#categories .categories__container .categories__left .categories__left-item > ul > li .cat__dropdown li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.85rem;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#categories .categories__container .categories__left .categories__left-item:not(:first-child) {
+  margin-top: 2rem;
+}
+
+#categories .categories__container .categories__right {
+  width: 873px;
+}
+
+#categories .categories__container .categories__right .categories__sort {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+  margin-bottom: 16px;
+}
+
+#categories .categories__container .categories__right .categories__sort select {
+  padding: 0.75rem;
+  outline: none;
+}
+
+#categories .categories__container .categories__right .categories__sort span {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+#categories .categories__container .categories__right .categories__sort i {
+  margin-left: 0.75rem;
+  font-size: 1.25rem;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  cursor: pointer;
+}
+
+#categories .categories__container .categories__right .categories__sort i:last-child {
+  opacity: .5;
+}
+
+#categories .categories__container .categories__right .categories__sort i:last-child:hover {
+  opacity: 1;
+}
+
+#categories .categories__container .categories__right .card__container {
+  width: 100%;
+}
 /*# sourceMappingURL=main.min.css.map */
