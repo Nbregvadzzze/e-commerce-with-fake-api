@@ -407,6 +407,7 @@
             </div>
         </div>
         <div class="cart__container">
+            <!-- SHOPPING AREA STARTED -->
             <div class="shopping">
                 <div class="shopping__product">
                     <table>
@@ -447,7 +448,7 @@
                     <div class="cart__data-header">
                         <h1>CART TOTALS</h1>
                     </div>
-                    <div class="cart__data-product">
+                    <!-- <div class="cart__data-product">
                         <h3>Product</h3>
                         <div class="cart__data-product-item">
                             <span>Fashionable Overnight Bag x<span id="count">1</span></span>
@@ -457,7 +458,7 @@
                             <span>Mackintosh Poket backpack x<span id="count">1</span></span>
                             <span>$<span id="total">180.00</span></span>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="cart__data-subtotal">
                         <h3>Subtotal</h3>
                         <h4>$426.99</h4>
@@ -483,26 +484,96 @@
                         <h3>Total</h3>
                         <h2>$426.99</h2>
                     </div>
-                    <div class="cart__data-payment">
+                    <!-- <div class="cart__data-payment">
                         <h3>Payment Methods</h3>
                         <span><input type="radio">Check payments</span>
                         <span><input type="radio">Cash on delivery</span>
-                    </div>
+                    </div> -->
 
                     <div class="cart__data-terms">
-                        <span> <input type="checkbox"><a href="#">I have read and agree to the website terms and conditions *</a></span>
-                        <a href="#" class="btn btn-black">Place order</a>
+                        <!-- <span> <input type="checkbox"><a href="#">I have read and agree to the website terms and conditions *</a></span> -->
+                        <a href="#" class="btn btn-black">PROCEED TO CHECKOUT</a>
                     </div>
                 </div>
             </div>
+            <!-- SHOPPING AREA ENDED -->
 
+            <!-- CHECKOUT AREA STARTED -->
             <div class="checkout">
                 <div class="checkout__form">
+                    <h3>BILLING DETAILS</h3>
 
+                    <div class="checkout__items">
+                        <div>
+                            <span>First Name *</span>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <span>Last Name *</span>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="checkout__item">
+                        <span>Company Name (Optional)</span>
+                        <input type="text">
+                    </div>
+
+                    <div class="checkout__item">
+                        <span>Country / Region *</span>
+                        <select>
+                                <option value="">United States</option>
+                                <option value="">United Kingdom</option>
+                                <option value="">France</option>
+                                <option value="">Austria</option>
+                            </select>
+                    </div>
+
+                    <div class="checkout__item">
+                        <span>Street Address *</span>
+                        <input type="text" placeholder="House number and street name">
+                    </div>
+
+                    <div class="checkout__items">
+                        <div>
+                            <span>Town / City *</span>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <span>State *</span>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="checkout__items">
+                        <div>
+                            <span>ZIP *</span>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <span>Phone *</span>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="checkout__item">
+                        <span>Email Address *</span>
+                        <input type="text">
+                    </div>
+
+                    <a href="#"><input type="checkbox">Create an account?</a>
+                    <a href="#"><input type="checkbox">Ship to a different address?</a>
+
+                    <div class="checkout__additional">
+                        <h3>ADDITIONAL INFORMATION</h3>
+                        <span>Order Notes (Optional)</span>
+                        <textarea placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                    </div>
                 </div>
+
                 <div id="cart__data">
                     <div class="cart__data-header">
-                        <h1>CART TOTALS</h1>
+                        <h1>YOUR ORDER</h1>
                     </div>
                     <div class="cart__data-product">
                         <h3>Product</h3>
@@ -552,6 +623,8 @@
                     </div>
                 </div>
             </div>
+            <!-- CHECKOUT AREA ENDED -->
+
         </div>
     </section>
     <!-- SECTION [CART] ENDED -->

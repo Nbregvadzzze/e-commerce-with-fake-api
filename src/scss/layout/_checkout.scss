@@ -1,0 +1,80 @@
+.checkout {
+    @include flex-between-start();
+    width: 100%;
+    .checkout__form {
+        width: 760px;
+        a {
+            @include flex-start-center();
+            color: $first-font-color;
+            text-decoration: none;
+            font-size: $font-sm;
+            display: block;
+            margin-bottom: $margin;
+            transition: $transition-200ms;
+            input {
+                margin-right: $margin-xs;
+            }
+            &:hover {
+                color: $second-font-color;
+            }
+        }
+        h3 {
+            font-weight: $font-weight-700;
+            margin-bottom: $margin-m;
+        }
+        span {
+            display: block;
+            color: $first-font-color;
+            font-size: $font-sm;
+            margin-bottom: $margin-xs;
+        }
+        input[type="text"],
+        select {
+            width: 100%;
+            height: 40px;
+            box-sizing: border-box;
+            outline: none;
+            border: 1px solid rgb(226, 226, 226);
+            transition: $transition-200ms;
+            padding-left: $padding;
+            font-family: $font-family;
+            color: $first-font-color;
+            &:focus {
+                border: 1px solid $black;
+            }
+        }
+        .checkout__items {
+            @include flex-between-start();
+            width: 100%;
+            margin-bottom: $margin-m;
+            div {
+                width: 48.5%;
+            }
+        }
+        .checkout__item {
+            margin-bottom: $margin-m;
+        }
+        .checkout__additional {
+            margin-top: $margin-xxl;
+            span {
+                margin-bottom: $margin;
+            }
+            textarea {
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 180px;
+                padding: $padding 0 0 $padding;
+                font-family: $font-family;
+                color: $first-font-color;
+                box-sizing: border-box;
+                outline: none;
+                border: 1px solid rgb(226, 226, 226);
+                transition: $transition-200ms;
+                &:focus {
+                    border: 1px solid $black;
+                }
+            }
+        }
+    }
+}

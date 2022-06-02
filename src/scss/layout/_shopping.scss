@@ -1,0 +1,136 @@
+.shopping {
+    @include flex-between-start();
+    width: 100%;
+}
+
+.shopping__product {
+    width: 760px;
+}
+
+.shopping {
+    margin-bottom: $margin-xxl;
+    table {
+        width: 100%;
+        margin-bottom: $margin-l;
+        thead {
+            border-bottom: 1px solid rgb(226, 226, 226);
+            tr {
+                text-align: left;
+                th {
+                    padding: $padding 0;
+                    // padding-right: 50px;
+                    color: $first-font-color;
+                    box-sizing: border-box;
+                    font: {
+                        weight: $font-weight-700;
+                        size: $font-sm;
+                    }
+                    ;
+                }
+            }
+        }
+        tbody {
+            tr {
+                text-align: left;
+                td {
+                    padding: $padding 0;
+                    align-items: center;
+                    height: 112px;
+                    position: relative;
+                    font-size: $font-sm;
+                    border-bottom: 1px solid rgb(226, 226, 226);
+                    ;
+                    a,
+                    input[type="number"],
+                    span {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%)
+                    }
+                    input[type="number"] {
+                        width: 40px;
+                        height: 40px;
+                        outline: none;
+                        font-weight: $font-weight-600;
+                        text-align: center;
+                        box-sizing: border-box;
+                    }
+                }
+                .product__name {
+                    width: 50%;
+                    img {
+                        width: 110px;
+                        height: 112px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $black;
+                        margin-left: $margin;
+                        line-height: $line-m;
+                        font: {
+                            weight: $font-weight-600;
+                            size: $font-sm;
+                        }
+                    }
+                }
+                .product__delete {
+                    width: 5%;
+                    span {
+                        @include flex-center-center();
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        border: 1px solid rgb(172, 171, 171);
+                        font-weight: $font-weight-600;
+                        cursor: pointer;
+                        transition: $transition-200ms;
+                        &:hover {
+                            background-color: $black;
+                            color: $white;
+                        }
+                    }
+                }
+                .product__total {
+                    font: {
+                        weight: $font-weight-600;
+                        size: $font-sm;
+                    }
+                }
+            }
+        }
+    }
+    >a {
+        font-size: $font-sm;
+        i {
+            font-size: $font-s;
+            margin-right: $margin-xs;
+        }
+    }
+    .shopping__product-coupon {
+        margin-top: $margin-xxl;
+        width: 100%;
+        h1 {
+            font: {
+                size: $font-m;
+                weight: $font-weight-700
+            }
+        }
+        input {
+            margin: $margin-m 0;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid rgb(226, 226, 226);
+            padding: $padding;
+            &::placeholder {
+                font-size: $font-s;
+                font-family: 'Poppins';
+                color: $first-font-color;
+            }
+        }
+        a {
+            font-size: $font-sm;
+        }
+    }
+}
