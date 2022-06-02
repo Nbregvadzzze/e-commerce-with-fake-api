@@ -53,7 +53,10 @@
 
 .btn.btn-black {
     padding: $padding $padding-xxl;
-    font-weight: $font-weight-600;
+    font: {
+        weight: $font-weight-600;
+        size: $font-sm;
+    }
     background-color: #222;
     color: $white;
     border-radius: 3px;
@@ -62,5 +65,9 @@
     text-transform: uppercase;
     &:hover {
         background-color: rgb(56, 56, 56);
+    }
+    i {
+        font-size: $font-s;
+        margin-right: $margin-xs;
     }
 }

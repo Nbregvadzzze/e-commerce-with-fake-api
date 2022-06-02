@@ -20,7 +20,7 @@
     .cart__data-subtotal,
     .cart__data-product-item,
     .cart__data-total {
-        @include flex-between-start();
+        @include flex-between-center();
     }
     .cart__data-product-item {
         margin-top: $margin;
