@@ -2684,7 +2684,7 @@ html {
 }
 
 #cart .cart__container .shopping__product {
-  width: 770px;
+  width: 760px;
 }
 
 #cart .cart__container .shopping__product table {
@@ -2781,6 +2781,13 @@ html {
   border: 1px solid #acabab;
   font-weight: 600;
   cursor: pointer;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+#cart .cart__container .shopping__product table tbody tr .product__delete span:hover {
+  background-color: black;
+  color: white;
 }
 
 #cart .cart__container .shopping__product table tbody tr .product__total {
@@ -2810,6 +2817,8 @@ html {
 #cart .cart__container .shopping__product .shopping__product-coupon input {
   margin: 1.25rem 0;
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   outline: none;
   border-bottom: 1px solid #e2e2e2;

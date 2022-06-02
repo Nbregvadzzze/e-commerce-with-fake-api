@@ -29,7 +29,7 @@
             width: 100%;
         }
         .shopping__product {
-            width: 770px;
+            width: 760px;
             table {
                 width: 100%;
                 margin-bottom: $margin-l;
@@ -104,6 +104,11 @@
                                 border: 1px solid rgb(172, 171, 171);
                                 font-weight: $font-weight-600;
                                 cursor: pointer;
+                                transition: $transition-200ms;
+                                &:hover {
+                                    background-color: $black;
+                                    color: $white;
+                                }
                             }
                         }
                         .product__total {
@@ -134,6 +139,7 @@
                 input {
                     margin: $margin-m 0;
                     width: 100%;
+                    box-sizing: border-box;
                     border: none;
                     outline: none;
                     border-bottom: 1px solid rgb(226, 226, 226);
