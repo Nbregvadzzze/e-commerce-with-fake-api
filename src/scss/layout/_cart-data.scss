@@ -1,0 +1,91 @@
+#cart__data {
+    width: 380px;
+    border: 1px solid rgb(226, 226, 226);
+    padding: $padding-xl;
+    box-sizing: border-box;
+    .cart__data-header {
+        border-bottom: 1px solid rgb(226, 226, 226);
+        padding-bottom: $padding;
+    }
+    .cart__data-product,
+    .cart__data-subtotal,
+    .cart__data-calculate,
+    .cart__data-shipping,
+    .cart__data-total,
+    .cart__data-payment,
+    .cart__data-terms {
+        padding: $padding-m 0;
+        border-bottom: 1px solid rgb(226, 226, 226);
+    }
+    .cart__data-subtotal,
+    .cart__data-product-item,
+    .cart__data-total {
+        @include flex-between-start();
+    }
+    .cart__data-product-item {
+        margin-top: $margin;
+    }
+    .cart__data-calculate,
+    .cart__data-payment,
+    .cart__data-shipping {
+        h3 {
+            margin-bottom: $margin-xl;
+        }
+    }
+    .cart__data-shipping {
+        select,
+        input {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            outline: none;
+            padding: $padding-s;
+            margin-top: $margin;
+            border: none;
+            border: 1px solid rgb(226, 226, 226);
+        }
+    }
+    span {
+        @include flex-start-center();
+        display: block;
+        line-height: $line-m;
+        input {
+            margin: 2px 10px 5px 0;
+        }
+    }
+    h1 {
+        font: {
+            weight: $font-weight-700;
+            size: $font-l;
+        }
+    }
+    h2 {
+        font: {
+            size: $font-m;
+            weight: $font-weight-700
+        }
+    }
+    h3 {
+        font-weight: $font-weight-600;
+    }
+    span {
+        color: $first-font-color;
+        font-size: $font-sm;
+    }
+    a {
+        color: $first-font-color;
+        font-size: $font-sm;
+        text-decoration: none;
+    }
+    .cart__data-terms {
+        input {
+            margin-right: $margin-m;
+        }
+        a[class="btn btn-black"] {
+            display: block;
+            text-align: center;
+            margin-top: $margin;
+            color: $white;
+        }
+    }
+}
