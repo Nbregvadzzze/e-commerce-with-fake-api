@@ -2536,7 +2536,7 @@ html {
   margin: 2rem 0;
 }
 
-#categories .categories__container .categories__right .categories__pagination {
+.pagination {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -2549,11 +2549,11 @@ html {
   width: 100%;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-left {
+.pagination .pagination-left {
   font-size: 14px;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right {
+.pagination .pagination-right {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -2566,7 +2566,7 @@ html {
   gap: 2rem;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right a {
+.pagination .pagination-right a {
   color: black;
   text-decoration: none;
   font-size: 0.85rem;
@@ -2574,23 +2574,23 @@ html {
   transition: all 200ms linear;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right a i:first-child {
+.pagination .pagination-right a i:first-child {
   margin-right: 0.5rem;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right a i:last-child {
+.pagination .pagination-right a i:last-child {
   margin-left: 0.5rem;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right a:hover {
+.pagination .pagination-right a:hover {
   opacity: .5 !important;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right .inActive {
+.pagination .pagination-right .inActive {
   opacity: .5 !important;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right #pages {
+.pagination .pagination-right #pages {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -2603,7 +2603,7 @@ html {
   gap: 16px;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right #pages span {
+.pagination .pagination-right #pages span {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -2622,11 +2622,11 @@ html {
   cursor: pointer;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right #pages span:hover {
+.pagination .pagination-right #pages span:hover {
   border: 1px solid #e0e0e0;
 }
 
-#categories .categories__container .categories__right .categories__pagination .categories__pagination-right #pages .activePage {
+.pagination .pagination-right #pages .activePage {
   border: 1px solid #e0e0e0;
 }
 
@@ -3449,5 +3449,58 @@ html {
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
   color: #666;
+}
+
+#product__details {
+  margin: 5rem 0;
+}
+
+#product__details .product__details-container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+#product__details .product__details-container .product__details-header {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+#product__details .product__details-container .product__details-header div {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
+#product__details .product__details-container .product__details-header div h1 {
+  cursor: pointer;
+  padding: 16px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  border-bottom: 2px solid rgba(0, 0, 0, 0) !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+#product__details .product__details-container .product__details-header div h1:hover {
+  border-bottom: 2px solid black !important;
+}
+
+#product__details .product__details-container .product__details-header div .activeArea {
+  border-bottom: 2px solid black !important;
 }
 /*# sourceMappingURL=main.min.css.map */
