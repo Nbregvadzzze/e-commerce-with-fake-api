@@ -3423,4 +3423,27 @@ html {
 #product .product__right .product__more .fa-scale-balanced {
   margin-left: 16px;
 }
+
+#related {
+  margin: 5rem 0;
+}
+
+#related .container:first-child {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  text-align: center;
+}
+
+#related .container:first-child h1 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#related .container:first-child h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: #666;
+}
 /*# sourceMappingURL=main.min.css.map */
