@@ -1,0 +1,26 @@
+#add__cart {
+    margin-bottom: $margin-xl;
+    .container {
+        border: 1px dashed black;
+        padding: $padding-xs;
+        box-sizing: border-box;
+        .add__cart-left {
+            @include flex-between-center();
+            p {
+                margin-left: $margin-l;
+                font-size: $font-sm;
+            }
+            a {
+                padding: $padding-s $padding-m;
+                font-size: $font-s;
+            }
+        }
+        .add__cart-right {
+            i {
+                font-size: $font-sm;
+                margin-right: $margin-xs;
+                cursor: pointer;
+            }
+        }
+    }
+}

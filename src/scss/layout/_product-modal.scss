@@ -1,0 +1,96 @@
+#product__modal {
+    @include flex-between-start();
+    width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    padding: $padding;
+    border: 1px solid rgb(216, 216, 216);
+    .product__left,
+    .product__right {
+        width: 485px;
+        height: 419px;
+    }
+    .product__left {
+        img {
+            width: 485px;
+            height: 419px;
+            object-fit: cover;
+        }
+    }
+    .product__right {
+        a {
+            font-size: $font-sm;
+            color: $first-font-color;
+            text-decoration: none;
+            transition: $transition-200ms;
+            &:hover {
+                color: $second-font-color;
+            }
+        }
+        h1 {
+            margin-top: $margin-xs;
+            font: {
+                weight: $font-weight-800;
+                size: $font-l;
+            }
+        }
+        .product__price {
+            margin: $margin-xxl 0 $margin 0;
+            h1 {
+                color: $pink;
+            }
+        }
+        .product__reviews {
+            font-size: $font-s;
+            color: $first-font-color;
+            a {
+                margin-left: $margin-xs;
+            }
+        }
+        .product__content {
+            margin: $margin-xl 0;
+            p {
+                color: $first-font-color;
+                line-height: $line-m;
+                font-size: 14px;
+                padding-bottom: $padding-m;
+            }
+        }
+        .product__add {
+            border-bottom: 1px solid rgb(224, 224, 224);
+            border-top: 1px solid rgb(224, 224, 224);
+            padding: $padding-m 0;
+            input {
+                width: 50px;
+                height: 46px;
+                text-align: center;
+                box-sizing: border-box;
+                border-radius: 3px;
+                outline: none;
+                border: 1px solid rgb(194, 194, 194);
+            }
+            a {
+                color: $white;
+                margin-left: $margin-l;
+                .fa-bag-shopping {
+                    margin-right: $margin-xs;
+                }
+            }
+        }
+        .product__more {
+            @include flex-start-center();
+            i {
+                margin-right: $margin-xs;
+            }
+            margin: $margin-xl 0;
+            .product__soc {
+                border-right: 1px solid rgb(224, 224, 224);
+                padding-right: $padding;
+                margin-right: $margin;
+            }
+            .fa-scale-balanced {
+                margin-left: $margin;
+            }
+        }
+    }
+}
