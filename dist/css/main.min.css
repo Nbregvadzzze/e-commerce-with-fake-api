@@ -3514,6 +3514,7 @@ html {
   -webkit-box-align: start !important;
       -ms-flex-align: start !important;
           align-items: flex-start !important;
+  margin-bottom: 5rem;
 }
 
 .description h3 {
@@ -3566,5 +3567,14 @@ html {
   padding: 0.75rem;
   line-height: 1.25rem;
   border-bottom: 1px solid #d6d6d6;
+}
+
+.description .description__right {
+  width: 550px;
+}
+
+.description .description__right video {
+  width: 100%;
+  border-radius: 3px;
 }
 /*# sourceMappingURL=main.min.css.map */

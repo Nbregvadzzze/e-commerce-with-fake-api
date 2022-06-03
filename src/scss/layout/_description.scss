@@ -1,5 +1,6 @@
 .description {
     @include flex-between-start();
+    margin-bottom: $margin-xxxl;
     h3 {
         margin-bottom: $margin;
         font: {
@@ -44,6 +45,13 @@
                 line-height: $line-m;
                 border-bottom: 1px solid rgb(214, 214, 214);
             }
+        }
+    }
+    .description__right {
+        width: 550px;
+        video {
+            width: 100%;
+            border-radius: 3px;
         }
     }
 }
