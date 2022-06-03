@@ -14,7 +14,7 @@
                 cursor: pointer;
                 >a {
                     text-decoration: none;
-                    color: $second-font-color;
+                    color: $c-black;
                     font-weight: $font-weight-700;
                 }
             }
@@ -100,7 +100,7 @@
                             margin-bottom: $margin-l
                         }
                         i {
-                            color: $first-font-color;
+                            color: $c-gray;
                             transition: $transition-200ms;
                         }
                     }
@@ -141,12 +141,12 @@
                     @include flex-between-center();
                     a {
                         text-decoration: none;
-                        color: $first-font-color;
+                        color: $c-gray;
                         font-weight: $font-weight-400;
                         font-size: $size;
                         transition: $transition-200ms;
                         &:hover {
-                            color: $second-font-color
+                            color: $c-black
                         }
                     }
                 }
@@ -185,7 +185,7 @@
                         @include flex-start-center();
                         width: 130px;
                         position: relative;
-                        color: $second-font-color;
+                        color: $c-black;
                         text-decoration: none;
                         &::after {
                             @include line();

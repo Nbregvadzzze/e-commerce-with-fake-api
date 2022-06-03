@@ -4,14 +4,14 @@
         font-size: $font-s;
         color: rgb(223, 223, 223);
         span {
-            color: $first-font-color;
+            color: $c-gray;
         }
         .fa-star.pink {
-            color: $pink;
+            color: $c-pink;
         }
     }
     p {
-        color: $first-font-color;
+        color: $c-gray;
         line-height: $line-m;
         font-size: 14px;
     }
@@ -29,7 +29,7 @@
             h4 {
                 font-size: $font-sm;
                 margin-bottom: $margin-xs;
-                color: $first-font-color;
+                color: $c-gray;
             }
         }
         .reviews__left-content {
@@ -44,14 +44,14 @@
                     border-radius: 10px;
                     background-color: rgb(223, 223, 223);
                     div {
-                        height: 100%;
+                        height: $h-100per;
                         background-color: rgb(150, 150, 150);
                         border-radius: 10px;
                     }
                 }
                 .reviews__percent {
                     font-size: $font-sm;
-                    color: $first-font-color;
+                    color: $c-gray;
                 }
             }
         }
@@ -78,7 +78,7 @@
                 border: 2px solid rgba(0, 0, 0, .2);
                 display: inline-block;
                 border-radius: 3px;
-                color: $first-font-color;
+                color: $c-gray;
             }
             select {
                 height: 35px;
@@ -126,7 +126,7 @@
                             cursor: pointer;
                             transition: $transition-200ms;
                             &:hover {
-                                color: $first-font-color;
+                                color: $c-gray;
                             }
                         }
                     }

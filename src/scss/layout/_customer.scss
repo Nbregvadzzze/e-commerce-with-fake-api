@@ -3,23 +3,23 @@
     margin-bottom: $margin-xxxl;
     .customer__item {
         width: 580px;
-        height: 100%;
+        height: $h-100per;
         border-radius: 7px;
         img {
-            width: 100%;
-            height: 100%;
+            width: $w-100per;
+            height: $h-100per;
             object-fit: cover;
             border-radius: 7px;
         }
     }
     .customer__content {
         width: 500px;
-        height: 100%;
+        height: $h-100per;
         box-sizing: border-box;
         h3 {
             font-size: $font-m;
             margin-bottom: $margin-m;
-            color: $first-font-color;
+            color: $c-gray;
         }
         h1 {
             margin-bottom: $margin-m;
@@ -37,7 +37,7 @@
             line-height: $line-l;
         }
         a {
-            color: $black;
+            color: $c-black;
             display: inline-block;
             margin-top: $margin-xxl;
             font: {

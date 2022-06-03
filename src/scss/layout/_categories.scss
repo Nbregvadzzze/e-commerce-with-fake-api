@@ -29,7 +29,7 @@
                         border-bottom: 1px solid rgb(221, 221, 221);
                     }
                     >li {
-                        color: $first-font-color;
+                        color: $c-gray;
                         text-decoration: none;
                         font-size: $font-sm;
                         transition: $transition-200ms;
@@ -37,14 +37,14 @@
                             margin-right: $margin-xs;
                         }
                         &:hover a {
-                            color: $black;
+                            color: $c-black;
                         }
                         &:hover i {
-                            color: $black;
+                            color: $c-black;
                         }
                         a {
                             @include flex-between-center();
-                            color: $first-font-color;
+                            color: $c-gray;
                             text-decoration: none;
                             font-size: $font-sm;
                             transition: $transition-200ms;
@@ -56,7 +56,7 @@
                             li {
                                 padding: $padding 0 $padding $padding;
                                 a {
-                                    color: $first-font-color;
+                                    color: $c-gray;
                                     text-decoration: none;
                                     font-size: $font-sm;
                                     transition: $transition-200ms;
@@ -100,7 +100,7 @@
                 }
             }
             .card__container {
-                width: 100%;
+                width: $w-100per;
                 border-bottom: 1px solid rgb(199, 199, 199);
                 margin: $margin-xl 0;
             }

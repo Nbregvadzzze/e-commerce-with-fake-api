@@ -11,7 +11,7 @@
     &::after {
         height: 1px !important;
         position: absolute !important;
-        width: 100% !important;
+        width: $w-100per !important;
         background-color: black !important;
         content: '' !important;
         top: 100% !important;
@@ -28,12 +28,12 @@
     padding: $padding $padding-xl;
     font-weight: $font-weight-600;
     background-color: rgba(255, 255, 255, .8);
-    color: $black;
+    color: $c-black;
     border-radius: 3px;
     transition: $transition-200ms;
     &:hover {
         background-color: rgba(0, 0, 0, .8);
-        color: $white !important;
+        color: $c-white !important;
     }
 }
 
@@ -41,7 +41,7 @@
     padding: $padding $padding-xxl;
     font-weight: $font-weight-600;
     background-color: #26c;
-    color: $white;
+    color: $c-white;
     border-radius: 3px;
     transition: $transition-200ms;
     display: inline-block;
@@ -58,7 +58,7 @@
         size: $font-sm;
     }
     background-color: #222;
-    color: $white;
+    color: $c-white;
     border-radius: 3px;
     transition: $transition-200ms;
     display: inline-block;

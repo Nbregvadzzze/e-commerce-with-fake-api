@@ -1,6 +1,6 @@
 .pagination {
     @include flex-between-center();
-    width: 100%;
+    width: $w-100per;
     .pagination-left {
         font-size: 14px;
     }
@@ -35,7 +35,7 @@
                 width: 15px !important;
                 height: 15px !important;
                 border: 1px solid rgba(224, 224, 224, 0) !important;
-                color: $first-font-color !important;
+                color: $c-gray !important;
                 cursor: pointer;
                 &:hover {
                     border: 1px solid rgba(224, 224, 224, 1) !important;

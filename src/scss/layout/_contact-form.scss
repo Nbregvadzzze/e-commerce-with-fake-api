@@ -48,9 +48,9 @@
         form {
             textarea {
                 display: block;
-                width: 100%;
-                max-width: 100%;
-                min-width: 100%;
+                width: $w-100per;
+                max-width: $w-100per;
+                min-width: $w-100per;
                 min-height: 170px;
                 box-sizing: border-box;
                 outline: none;
@@ -60,7 +60,7 @@
                 box-sizing: border-box;
             }
             div {
-                width: 100%;
+                width: $w-100per;
                 margin-top: $margin;
                 @include flex-between-start();
                 input {

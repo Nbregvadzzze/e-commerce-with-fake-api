@@ -9,7 +9,7 @@
         .top__left {
             width: 580px;
             position: relative;
-            height: 100%;
+            height: $h-100per;
             &::after {
                 @include wrapper();
             }
@@ -17,8 +17,8 @@
                 background-color: rgba(0, 0, 0, .2);
             }
             img {
-                width: 100% !important;
-                height: 100% !important;
+                width: $w-100per !important;
+                height: $h-100per !important;
                 object-fit: cover;
                 border-radius: 3px;
             }
@@ -36,7 +36,7 @@
                     }
                 }
                 h3 {
-                    color: $first-font-color;
+                    color: $c-gray;
                     font-size: $font-m;
                     margin-top: $margin-xs;
                 }
@@ -44,7 +44,7 @@
         }
         .top__right {
             width: 580px;
-            height: 100%;
+            height: $h-100per;
             @include flex-between-center();
             flex-direction: column !important;
             .top__right-item {
@@ -62,12 +62,12 @@
                 }
                 &:hover a {
                     background-color: rgba(0, 0, 0, .8);
-                    color: $white;
+                    color: $c-white;
                 }
             }
             img {
-                width: 100% !important;
-                height: 100% !important;
+                width: $w-100per !important;
+                height: $h-100per !important;
                 object-fit: cover;
                 border-radius: 3px;
             }
@@ -91,6 +91,27 @@
         a {
             margin-right: $margin-s;
             font-size: $font-sm
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1170px) {
+    #top {
+        .container:last-child {
+            .top__left {
+                width: 400px;
+            }
+            .top__right {
+                width: 380px;
+                .top__btn {
+                    i {
+                        display: none;
+                    }
+                }
+            }
+            a {
+                font-size: $font-s;
+            }
         }
     }
 }

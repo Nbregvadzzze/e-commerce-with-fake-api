@@ -1,10 +1,9 @@
 // SECTION [HEADER]
 #header {
-    width: 100%;
     font-size: $font-s;
     border-bottom: 1px solid rgb(219, 219, 219);
     padding: $padding-xs 0;
-    color: $first-font-color;
+    color: $c-gray;
     .header__right {
         .header__dropdown {
             @include flex-between-center();
@@ -15,11 +14,11 @@
                 padding: $padding-xs 0;
                 cursor: pointer;
                 &:hover {
-                    color: $second-font-color;
+                    color: $c-black;
                 }
                 .dropdown {
                     position: absolute;
-                    width: 100%;
+                    width: $w-100per;
                     height: 50px;
                     content: '';
                     top: 80%;
@@ -32,12 +31,12 @@
                     transition: $transition-200ms;
                     a {
                         text-decoration: none;
-                        color: $first-font-color;
+                        color: $c-gray;
                         margin-bottom: $margin-xs;
                         display: inline-block;
                         transition: $transition-200ms;
                         &:hover {
-                            color: $second-font-color;
+                            color: $c-black;
                         }
                     }
                 }
@@ -65,19 +64,19 @@
             gap: $gap-l;
             border-left: 1px solid rgb(219, 219, 219);
             padding-left: $padding;
-            color: $first-font-color;
+            color: $c-gray;
             transition: $transition-200ms;
             li {
                 @include flex-start-center();
                 &:hover a {
-                    color: $second-font-color;
+                    color: $c-black;
                 }
                 &:hover i {
-                    color: $second-font-color;
+                    color: $c-black;
                 }
             }
             a {
-                color: $first-font-color;
+                color: $c-gray;
                 text-decoration: none;
                 transition: $transition-200ms;
             }

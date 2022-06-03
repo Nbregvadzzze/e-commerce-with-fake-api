@@ -14,8 +14,22 @@
         span {
             display: inline-block;
             margin-top: $margin-xs;
-            color: $first-font-color;
+            color: $c-gray;
             font-size: $font-sm;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:1170px) {
+    #guaranty {
+        .guaranty__item {
+            margin-right: $margin;
+            h1 {
+                font-size: $font-sm;
+            }
+            span {
+                font-size: $font-s;
+            }
         }
     }
 }

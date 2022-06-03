@@ -1,5 +1,5 @@
 .order {
-    width: 100%;
+    width: $w-100per;
     h2 {
         margin-bottom: $margin;
         font: {
@@ -11,7 +11,7 @@
         font-weight: $font-weight-600;
     }
     span {
-        color: $first-font-color;
+        color: $c-gray;
         font-size: $font-sm;
     }
     .tahnks {
@@ -41,7 +41,7 @@
         }
     }
     #cart__data {
-        width: 100%;
+        width: $w-100per;
         padding-bottom: 0;
         .cart__data-shipping,
         .cart__data-payment {

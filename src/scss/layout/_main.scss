@@ -13,18 +13,18 @@
         }
         .main__search {
             @include flex-between-center();
-            border: 2px solid $border-color;
+            border: 2px solid $c-border;
             width: 510px;
             height: 44px;
             border-radius: 4px;
             input {
                 width: 90%;
-                height: 100%;
+                height: $h-100per;
                 box-sizing: border-box;
                 padding-left: $padding-s;
                 outline: none;
                 border: none;
-                color: $first-font-color;
+                color: $c-gray;
                 font: {
                     size: $font-s;
                     family: $font-family;
@@ -42,7 +42,7 @@
         height: 44px;
         gap: $gap;
         a {
-            color: $second-font-color;
+            color: $c-black;
         }
         .main__call,
         .main__shop {
@@ -88,8 +88,8 @@
             font-size: $font-xl;
         }
         .fa-heart {
-            border-right: 1px solid $border-color;
-            border-left: 1px solid $border-color;
+            border-right: 1px solid $c-border;
+            border-left: 1px solid $c-border;
             padding: 0 $padding-s;
         }
     }

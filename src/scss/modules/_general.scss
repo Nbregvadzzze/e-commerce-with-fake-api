@@ -8,11 +8,11 @@ html {
 ::placeholder {
     font-size: $font-s;
     font-family: 'Poppins';
-    color: $first-font-color;
+    color: $c-gray;
 }
 
 .w-100p {
-    width: 100% !important;
+    width: $w-100per !important;
 }
 
 .w-25p {

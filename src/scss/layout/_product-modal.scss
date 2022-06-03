@@ -20,11 +20,11 @@
     .product__right {
         a {
             font-size: $font-sm;
-            color: $first-font-color;
+            color: $c-gray;
             text-decoration: none;
             transition: $transition-200ms;
             &:hover {
-                color: $second-font-color;
+                color: $c-black;
             }
         }
         h1 {
@@ -37,12 +37,12 @@
         .product__price {
             margin: $margin-xxl 0 $margin 0;
             h1 {
-                color: $pink;
+                color: $c-pink;
             }
         }
         .product__reviews {
             font-size: $font-s;
-            color: $first-font-color;
+            color: $c-gray;
             a {
                 margin-left: $margin-xs;
             }
@@ -50,7 +50,7 @@
         .product__content {
             margin: $margin-xl 0;
             p {
-                color: $first-font-color;
+                color: $c-gray;
                 line-height: $line-m;
                 font-size: 14px;
                 padding-bottom: $padding-m;
@@ -70,7 +70,7 @@
                 border: 1px solid rgb(194, 194, 194);
             }
             a {
-                color: $white;
+                color: $c-white;
                 margin-left: $margin-l;
                 .fa-bag-shopping {
                     margin-right: $margin-xs;

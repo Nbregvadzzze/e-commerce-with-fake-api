@@ -8,12 +8,12 @@
         }
     }
     p {
-        color: $first-font-color;
+        color: $c-gray;
         font-size: 14px;
         line-height: $line-l;
     }
     span {
-        color: $first-font-color !important;
+        color: $c-gray !important;
         font-size: 14px !important;
     }
     h5 {
@@ -28,12 +28,12 @@
             margin: $margin 0;
             li {
                 font-size: 14px;
-                color: $first-font-color;
+                color: $c-gray;
                 margin-bottom: $margin-s;
             }
             i {
                 font-size: $font-sm;
-                color: $second-font-color;
+                color: $c-black;
                 margin-right: $margin-s;
             }
         }
@@ -49,7 +49,7 @@
     .description__right {
         width: 550px;
         video {
-            width: 100%;
+            width: $w-100per;
             border-radius: 3px;
         }
     }

@@ -16,7 +16,7 @@
         h3 {
             font-size: $font-m;
             margin-bottom: $margin-m;
-            color: $first-font-color;
+            color: $c-gray;
         }
     }
     .brands__item {
@@ -28,7 +28,7 @@
         background-color: white;
         img {
             border-radius: 7px;
-            width: 100%;
+            width: $w-100per;
             height: 100px;
             object-fit: cover;
         }

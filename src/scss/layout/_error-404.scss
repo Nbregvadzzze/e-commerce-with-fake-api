@@ -3,7 +3,7 @@
     height: 700px;
     .error__container {
         @include flex-center-center();
-        height: 100%;
+        height: $h-100per;
         .error__content {
             text-align: center;
             h1 {
