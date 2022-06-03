@@ -1,0 +1,137 @@
+.reviews {
+    @include flex-between-start();
+    .stars {
+        font-size: $font-s;
+        color: rgb(223, 223, 223);
+        span {
+            color: $first-font-color;
+        }
+        .fa-star.pink {
+            color: $pink;
+        }
+    }
+    p {
+        color: $first-font-color;
+        line-height: $line-m;
+        font-size: 14px;
+    }
+    .reviews__left {
+        width: 400px;
+        .reviews__left-header {
+            @include flex-start-center();
+            gap: $gap;
+            h1 {
+                font: {
+                    size: 55px;
+                    weight: $font-weight-800
+                }
+            }
+            h4 {
+                font-size: $font-sm;
+                margin-bottom: $margin-xs;
+                color: $first-font-color;
+            }
+        }
+        .reviews__left-content {
+            margin-top: $margin-s;
+            .reviews__left-content-item {
+                @include flex-start-center();
+                gap: $gap;
+                margin-bottom: $margin-s;
+                .reviews__size {
+                    width: 220px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background-color: rgb(223, 223, 223);
+                    div {
+                        height: 100%;
+                        background-color: rgb(150, 150, 150);
+                        border-radius: 10px;
+                    }
+                }
+                .reviews__percent {
+                    font-size: $font-sm;
+                    color: $first-font-color;
+                }
+            }
+        }
+        a[class="btn btn-black"] {
+            margin-top: $margin-l;
+        }
+    }
+    .reviews__right {
+        width: 740px;
+        span {
+            font: {
+                size: $font-sm;
+                weight: $font-weight-600;
+            }
+        }
+        .reviews__rigth-header {
+            padding-bottom: $padding;
+            border-bottom: 1px solid rgb(211, 211, 211);
+            @include flex-between-center();
+            a {
+                margin-right: $margin;
+                padding: $padding-s $padding-m;
+                font-size: $font-sm;
+                border: 2px solid rgba(0, 0, 0, .2);
+                display: inline-block;
+                border-radius: 3px;
+                color: $first-font-color;
+            }
+            select {
+                height: 35px;
+                border-color: rgba(0, 0, 0, .2);
+                outline: none;
+                border-radius: 3px;
+                padding: 0 $padding;
+            }
+        }
+        .reviews__right-content {
+            .reviews__right-content-item {
+                padding: $padding-l 0 $padding-xxl 0;
+                margin-bottom: $margin-l;
+                border-bottom: 1px solid rgb(211, 211, 211);
+                @include flex-between-start();
+                gap: $gap-l;
+                .reviews__right-content-item-left {
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        object-fit: cover;
+                    }
+                }
+                .reviews__right-content-item-right {
+                    .reviews__by {
+                        margin: $margin 0;
+                    }
+                    .reviews__visual {
+                        margin: $margin 0;
+                        img {
+                            width: 60px;
+                            height: 65px;
+                            object-fit: cover;
+                            cursor: pointer;
+                            margin-right: $margin;
+                        }
+                    }
+                    .reviews__like {
+                        @include flex-start-center();
+                        gap: $gap-l;
+                        i {
+                            margin-right: $margin-xxs;
+                        }
+                        span {
+                            cursor: pointer;
+                            transition: $transition-200ms;
+                            &:hover {
+                                color: $first-font-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@
     transition: $transition-200ms;
     &:hover {
         background-color: rgba(0, 0, 0, .8);
-        color: $white;
+        color: $white !important;
     }
 }
 

@@ -30,18 +30,19 @@
             gap: $gap;
             span {
                 @include flex-center-center();
-                padding: $padding-xs;
-                transition: $transition-200ms;
-                width: 15px;
-                height: 15px;
-                border: 1px solid rgba(224, 224, 224, 0);
+                padding: $padding-xs !important;
+                transition: $transition-200ms !important;
+                width: 15px !important;
+                height: 15px !important;
+                border: 1px solid rgba(224, 224, 224, 0) !important;
+                color: $first-font-color !important;
                 cursor: pointer;
                 &:hover {
-                    border: 1px solid rgba(224, 224, 224, 1);
+                    border: 1px solid rgba(224, 224, 224, 1) !important;
                 }
             }
             .activePage {
-                border: 1px solid rgb(224, 224, 224);
+                border: 1px solid rgb(224, 224, 224) !important;
             }
         }
     }
