@@ -1,4 +1,5 @@
 #product {
+    margin-top: $margin-m;
     .container {
         @include flex-between-start();
         gap: $gap-l;
