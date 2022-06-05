@@ -290,7 +290,6 @@ __webpack_require__.r(__webpack_exports__);
                 e.preventDefault();
                 const priceInt = price.textContent.replace(/\$/i, '');
                 const total = priceInt * ~~count.value;
-                console.log(e.target);
                 const product = {
                     header: header.textContent,
                     price: priceInt,
@@ -316,6 +315,64 @@ __webpack_require__.r(__webpack_exports__);
     showProduct()
 
 };
+
+/***/ }),
+
+/***/ "./js/modules/quickToCart.js":
+/*!***********************************!*\
+  !*** ./js/modules/quickToCart.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ quickToCart)
+/* harmony export */ });
+/* harmony import */ var _storage_product_local__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage/product-local */ "./js/modules/storage/product-local.js");
+/* harmony import */ var _bag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bag */ "./js/modules/bag.js");
+
+
+
+function quickToCart({ btnModalSelector, headerModalSelector, priceModalSelector, imgModalSelector, countModalSelector, modalNotfSelector, modalNotfHeaderSelector }) {
+    const btnModal = document.querySelector(btnModalSelector),
+        headerModal = document.querySelector(headerModalSelector),
+        priceModal = document.querySelector(priceModalSelector),
+        imgModal = document.querySelector(imgModalSelector),
+        countModal = document.querySelector(countModalSelector),
+        modalNotf = document.querySelector(modalNotfSelector),
+        modalNotfHeader = document.querySelector(modalNotfHeaderSelector);
+
+    function addToCart() {
+        if (btnModal) {
+            btnModal.addEventListener('click', e => {
+                e.preventDefault();
+                const priceInt = priceModal.textContent.replace(/\$/i, '');
+                const total = priceInt * ~~countModal.value;
+
+                const product = {
+                    header: headerModal.textContent,
+                    price: priceInt,
+                    img: imgModal.getAttribute('src'),
+                    count: ~~countModal.value,
+                    total: total
+                };
+                (0,_storage_product_local__WEBPACK_IMPORTED_MODULE_0__.setLS)(product);
+                success(product);
+                (0,_bag__WEBPACK_IMPORTED_MODULE_1__["default"])();
+            });
+        };
+    };
+
+    function success(product) {
+        modalNotf.style.display = 'block';
+        modalNotfHeader.textContent = `${product.header} has been added to your cart.`
+        setTimeout(() => {
+            modalNotf.style.display = 'none';
+        }, 3000);
+    };
+
+    addToCart();
+}
 
 /***/ }),
 
@@ -661,6 +718,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
 /* harmony import */ var _modules_getProduct__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/getProduct */ "./js/modules/getProduct.js");
 /* harmony import */ var _modules_quickView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/quickView */ "./js/modules/quickView.js");
+/* harmony import */ var _modules_quickToCart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/quickToCart */ "./js/modules/quickToCart.js");
+
 
 
 
@@ -715,7 +774,17 @@ window.addEventListener('DOMContentLoaded', () => {
         cardImgSelector: '.card__container .card__img img',
         cardPriceSelector: '.card__container .card__new',
         cardNameSelector: '.card__container .card__name'
-    })
+    });
+
+    (0,_modules_quickToCart__WEBPACK_IMPORTED_MODULE_8__["default"])({
+        btnModalSelector: '#product__modal .product__add a',
+        headerModalSelector: '#product__modal .product__header h1',
+        priceModalSelector: '#product__modal .product__price h1',
+        imgModalSelector: '#product__modal .product__left img',
+        countModalSelector: '#product__modal input',
+        modalNotfSelector: '#product__modal #add__cart',
+        modalNotfHeaderSelector: '#product__modal #add__cart p'
+    });
 });
 })();
 

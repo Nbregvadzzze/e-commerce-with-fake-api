@@ -33,7 +33,6 @@ export default function({ btnSelector, productHeader, productPrice, productImg, 
                 e.preventDefault();
                 const priceInt = price.textContent.replace(/\$/i, '');
                 const total = priceInt * ~~count.value;
-                console.log(e.target);
                 const product = {
                     header: header.textContent,
                     price: priceInt,

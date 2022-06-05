@@ -6,7 +6,8 @@ import modals from './modules/modals';
 import bag from './modules/bag';
 import slider from './modules/slider';
 import getProduct from './modules/getProduct';
-import quickView from './modules/quickView'
+import quickView from './modules/quickView';
+import quickToCart from './modules/quickToCart';
 
 window.addEventListener('DOMContentLoaded', () => {
     product({
@@ -52,5 +53,15 @@ window.addEventListener('DOMContentLoaded', () => {
         cardImgSelector: '.card__container .card__img img',
         cardPriceSelector: '.card__container .card__new',
         cardNameSelector: '.card__container .card__name'
-    })
+    });
+
+    quickToCart({
+        btnModalSelector: '#product__modal .product__add a',
+        headerModalSelector: '#product__modal .product__header h1',
+        priceModalSelector: '#product__modal .product__price h1',
+        imgModalSelector: '#product__modal .product__left img',
+        countModalSelector: '#product__modal input',
+        modalNotfSelector: '#product__modal #add__cart',
+        modalNotfHeaderSelector: '#product__modal #add__cart p'
+    });
 });
