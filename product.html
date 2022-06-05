@@ -993,6 +993,13 @@
 
 
     <script src="dist/js/bundle.js "></script>
+    <script>
+        const render = JSON.parse(localStorage.getItem('currentProduct'));
+        if (render === null || render == []) {
+            location.href = 'home.html';
+
+        }
+    </script>
 </body>
 
 </html>
