@@ -1,5 +1,5 @@
 'use strict';
-import { getLS, removeLS } from "./storage/localstorage";
+import { getLS, removeLS } from "./storage/product-local";
 import bag from "./bag";
 
 export default function cart({ cartContainerSelector, subTotalSelector, cartTotalSelector, dataSelector }) {
@@ -9,12 +9,12 @@ export default function cart({ cartContainerSelector, subTotalSelector, cartTota
         data = document.querySelectorAll(dataSelector),
         products = getLS();
 
-    function showProducts() {
+    function showCart() {
         products.forEach((product, i) => {
             if (cartContainer) {
                 cartContainer.innerHTML += `
             <tr data-header=${i}>
-                <td class="product__name"><img src="src/img/cart/2.jpg" alt=""><a href="#">${product.header}</a></td>
+                <td class="product__name"><img src="${product.img}" alt=""><a href="#">${product.header}</a></td>
                 <td><span>$${product.price}</span></td>
                 <td><span>${product.count}</span></td>
                 <td class="product__total"> <span>$${product.total.toFixed(2)}</span></td>
@@ -92,7 +92,7 @@ export default function cart({ cartContainerSelector, subTotalSelector, cartTota
             });
         };
     };
-    showProducts();
+    showCart();
     removeProduct();
     cartTotals(products);
     dataHeaders(products);

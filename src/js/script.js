@@ -5,6 +5,7 @@ import tabs from './modules/tabs';
 import modals from './modules/modals';
 import bag from './modules/bag';
 import slider from './modules/slider';
+import getProduct from './modules/getProduct';
 
 window.addEventListener('DOMContentLoaded', () => {
     product({
@@ -14,7 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
         productImg: '.product__slider-container img',
         productCount: '.product__add input',
         notfSelector: '#add__cart',
-        notfHeaderSelector: '#add__cart p'
+        notfHeaderSelector: '#add__cart p',
+        productShortImg: '.product__left .product__img-short'
     });
     cart({
         cartContainerSelector: '.shopping tbody',
@@ -34,4 +36,11 @@ window.addEventListener('DOMContentLoaded', () => {
         sliderNavSelector: '.slider__navigation',
         navActive: 'navActive'
     });
+
+    getProduct({
+        cardImgSelector: '.card__container .card__img img',
+        cardPriceSelector: '.card__container .card__new',
+        cardNameSelector: '.card__container .card__name'
+    })
+
 })

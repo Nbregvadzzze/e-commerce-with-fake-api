@@ -1,14 +1,31 @@
 'use strict';
 import bag from "./bag";
-import { setLS } from "./storage/localstorage";
-export default function({ btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector }) {
+import { setLS } from "./storage/product-local";
+import { getSS } from "./storage/current-local";
+export default function({ btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector, productShortImg }) {
     const btn = document.querySelector(btnSelector),
         header = document.querySelector(productHeader),
         price = document.querySelector(productPrice),
         img = document.querySelector(productImg),
         count = document.querySelector(productCount),
         notf = document.querySelector(notfSelector),
+        shortImg = document.querySelector(productShortImg),
         notfHeader = document.querySelector(notfHeaderSelector);
+
+    function showProduct() {
+        let products = getSS();
+        if (header && price && img) {
+            header.textContent = products.cardName;
+            price.textContent = `$${ products.cardPrice}`;
+            img.setAttribute('src', products.cardImgSrc);
+
+            for (let i = 0; i < 4; i++) {
+                const short = document.createElement('img');
+                short.setAttribute('src', products.cardImgSrc);
+                shortImg.append(short);
+            }
+        }
+    }
 
     function addToCart() {
         if (btn) {
@@ -39,4 +56,6 @@ export default function({ btnSelector, productHeader, productPrice, productImg, 
         }, 3000);
     };
     addToCart();
+    showProduct()
+
 };

@@ -1,5 +1,5 @@
 'use strict';
-import { getLS } from "./storage/localstorage";
+import { getLS } from "./storage/product-local";
 
 export default function bag() {
     const bag = document.querySelector('.bagCount'),
