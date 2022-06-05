@@ -1,7 +1,7 @@
 'use strict';
 import bag from "./bag";
 import { setLS } from "./storage/localstorage";
-export default function(btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector) {
+export default function({ btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector }) {
     const btn = document.querySelector(btnSelector),
         header = document.querySelector(productHeader),
         price = document.querySelector(productPrice),

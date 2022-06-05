@@ -2,7 +2,7 @@
 import { getLS, removeLS } from "./storage/localstorage";
 import bag from "./bag";
 
-export default function cart(cartContainerSelector, subTotalSelector, cartTotalSelector, dataSelector) {
+export default function cart({ cartContainerSelector, subTotalSelector, cartTotalSelector, dataSelector }) {
     const cartContainer = document.querySelector(cartContainerSelector),
         subTotal = document.querySelectorAll(subTotalSelector),
         cartTotal = document.querySelectorAll(cartTotalSelector),
