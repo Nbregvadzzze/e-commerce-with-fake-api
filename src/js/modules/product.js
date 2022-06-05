@@ -1,4 +1,5 @@
 'use strict';
+import bag from "./bag";
 import { setLS } from "./storage/localstorage";
 export default function(btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector) {
     const btn = document.querySelector(btnSelector),
@@ -25,6 +26,7 @@ export default function(btnSelector, productHeader, productPrice, productImg, pr
                 };
                 setLS(product);
                 success(product);
+                bag();
             });
         };
     };

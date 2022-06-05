@@ -11,5 +11,5 @@ window.addEventListener('DOMContentLoaded', () => {
     tabs('#cart .tab', '#cart .tabControl', 'activeTab');
     tabs('#product__details .tab', '#product__details .tabControl', 'activeArea');
     modals('#product__modal', '.card__quick');
-    bag('.bagCount');
+    bag();
 })

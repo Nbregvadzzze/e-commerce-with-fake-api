@@ -16,12 +16,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function bag(bagCount) {
-    const bag = document.querySelector(bagCount),
+function bag() {
+    const bag = document.querySelector('.bagCount'),
+        sum = document.querySelector('.bagSum'),
         products = (0,_storage_localstorage__WEBPACK_IMPORTED_MODULE_0__.getLS)();
 
     bag.textContent = products.length;
 
+    let allTotals = 0
+
+    products.forEach(product => {
+        allTotals += product.total;
+    });
+
+    sum.textContent = `$${allTotals.toFixed(2)}`;
 }
 
 /***/ }),
@@ -37,6 +45,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ cart)
 /* harmony export */ });
 /* harmony import */ var _storage_localstorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage/localstorage */ "./js/modules/storage/localstorage.js");
+/* harmony import */ var _bag__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bag */ "./js/modules/bag.js");
+
 
 
 
@@ -125,7 +135,7 @@ function cart(cartContainerSelector, subTotalSelector, cartTotalSelector, dataSe
 
                     const products = (0,_storage_localstorage__WEBPACK_IMPORTED_MODULE_0__.getLS)();
                     cartTotals(products);
-
+                    (0,_bag__WEBPACK_IMPORTED_MODULE_1__["default"])();
                 };
             });
         };
@@ -198,7 +208,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _storage_localstorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage/localstorage */ "./js/modules/storage/localstorage.js");
+/* harmony import */ var _bag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bag */ "./js/modules/bag.js");
+/* harmony import */ var _storage_localstorage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./storage/localstorage */ "./js/modules/storage/localstorage.js");
+
 
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__(btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector) {
@@ -224,8 +236,9 @@ __webpack_require__.r(__webpack_exports__);
                     count: ~~count.value,
                     total: total
                 };
-                (0,_storage_localstorage__WEBPACK_IMPORTED_MODULE_0__.setLS)(product);
+                (0,_storage_localstorage__WEBPACK_IMPORTED_MODULE_1__.setLS)(product);
                 success(product);
+                (0,_bag__WEBPACK_IMPORTED_MODULE_0__["default"])();
             });
         };
     };
@@ -446,7 +459,7 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('#cart .tab', '#cart .tabControl', 'activeTab');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('#product__details .tab', '#product__details .tabControl', 'activeArea');
     (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('#product__modal', '.card__quick');
-    (0,_modules_bag__WEBPACK_IMPORTED_MODULE_4__["default"])('.bagCount');
+    (0,_modules_bag__WEBPACK_IMPORTED_MODULE_4__["default"])();
 })
 })();
 

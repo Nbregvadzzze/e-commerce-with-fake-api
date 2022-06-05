@@ -1,5 +1,6 @@
 'use strict';
 import { getLS, removeLS } from "./storage/localstorage";
+import bag from "./bag";
 
 export default function cart(cartContainerSelector, subTotalSelector, cartTotalSelector, dataSelector) {
     const cartContainer = document.querySelector(cartContainerSelector),
@@ -86,7 +87,7 @@ export default function cart(cartContainerSelector, subTotalSelector, cartTotalS
 
                     const products = getLS();
                     cartTotals(products);
-
+                    bag();
                 };
             });
         };
