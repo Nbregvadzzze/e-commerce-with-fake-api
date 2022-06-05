@@ -8,6 +8,9 @@ import slider from './modules/slider';
 import getProduct from './modules/getProduct';
 import quickView from './modules/quickView';
 import quickToCart from './modules/quickToCart';
+import getAllData from './modules/getAllData';
+import about from './modules/about';
+
 
 window.addEventListener('DOMContentLoaded', () => {
     product({
@@ -63,5 +66,13 @@ window.addEventListener('DOMContentLoaded', () => {
         countModalSelector: '#product__modal input',
         modalNotfSelector: '#product__modal #add__cart',
         modalNotfHeaderSelector: '#product__modal #add__cart p'
+    });
+
+    getAllData('.card__container', 'card__item');
+
+    about({
+        businessYearSelector: '#businessYear',
+        designBrandsSelector: '#designBrands',
+        teamMembersSelector: '#teamMembers'
     });
 });

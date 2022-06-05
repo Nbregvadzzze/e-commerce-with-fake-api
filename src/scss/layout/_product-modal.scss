@@ -47,13 +47,14 @@
             }
             h1 {
                 margin-top: $margin-xs;
+                box-sizing: border-box;
                 font: {
                     weight: $font-weight-800;
-                    size: $font-l;
+                    size: $font-m;
                 }
             }
             .product__price {
-                margin: $margin-xxl 0 $margin 0;
+                margin: $margin-l 0 $margin 0;
                 h1 {
                     color: $c-pink;
                 }
@@ -66,7 +67,7 @@
                 }
             }
             .product__content {
-                margin: $margin-xl 0;
+                margin: $margin-l 0;
                 p {
                     color: $c-gray;
                     line-height: $line-m;

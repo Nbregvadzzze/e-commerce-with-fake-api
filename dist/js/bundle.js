@@ -2,6 +2,46 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/modules/about.js":
+/*!*****************************!*\
+  !*** ./js/modules/about.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ about)
+/* harmony export */ });
+
+
+function about({ businessYearSelector, designBrandsSelector, teamMembersSelector }) {
+    const businessYear = document.querySelector(businessYearSelector),
+        designBrands = document.querySelector(designBrandsSelector),
+        teamMembers = document.querySelector(teamMembersSelector)
+
+    let i = 0;
+
+    setInterval(() => {
+        i += 1;
+
+        if (i <= 50) {
+            businessYear.textContent = `${i}+`
+        }
+
+        if (i <= 30) {
+            designBrands.textContent = `${i}+`
+
+        }
+
+        if (i <= 85) {
+            teamMembers.textContent = `${i}+`
+
+        }
+    }, 30)
+}
+
+/***/ }),
+
 /***/ "./js/modules/bag.js":
 /*!***************************!*\
   !*** ./js/modules/bag.js ***!
@@ -144,6 +184,121 @@ function cart({ cartContainerSelector, subTotalSelector, cartTotalSelector, data
     removeProduct();
     cartTotals(products);
     dataHeaders(products);
+
+};
+
+/***/ }),
+
+/***/ "./js/modules/getAllData.js":
+/*!**********************************!*\
+  !*** ./js/modules/getAllData.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ getAllData)
+/* harmony export */ });
+/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/services */ "./js/services/services.js");
+/* harmony import */ var _getProduct__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getProduct */ "./js/modules/getProduct.js");
+/* harmony import */ var _quickView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./quickView */ "./js/modules/quickView.js");
+/* harmony import */ var _modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modals */ "./js/modules/modals.js");
+
+
+
+
+
+
+
+function getAllData(cardContainerSelector, cardItemSelector) {
+    const cardContainer = document.querySelector(cardContainerSelector),
+        cardLoading = document.createElement('img');
+
+    cardLoading.setAttribute('src', './src/img/loading/Loading_icon.gif')
+    if (cardContainer) {
+        cardContainer.style.cssText = `
+        display: flex;
+        justify-content: center;
+    `;
+        cardContainer.appendChild(cardLoading);
+
+    }
+
+    (0,_services_services__WEBPACK_IMPORTED_MODULE_0__["default"])('https://fakestoreapi.com/products')
+        .then(data => {
+            data.forEach(product => {
+                const cardItem = document.createElement('div');
+                cardItem.classList.add(cardItemSelector);
+
+                cardItem.innerHTML = `
+                <div class="card__img">
+                <a href="product.html"><img src="${product.image}" alt=""></a>
+                <div class="card__quick">
+                    quick view
+                </div>
+                <div class="card__icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div class="card__info-card pink">
+                    new
+                </div>
+                </div>
+                <div class="card__category">
+                    women
+                </div>
+                <div class="card__name">
+                ${product.title.slice(0,20)}
+                </div>
+                <div class="card__price">
+                    <div class="card__new">
+                        $${product.price}
+                    </div>
+                    <div class="card__old">
+                        $160.99
+                    </div>
+                </div>
+                <div class="card__review">
+                    <div class="card__rev-icons">
+                        <i class="fa-solid fa-star pink"></i>
+                        <i class="fa-solid fa-star pink"></i>
+                        <i class="fa-solid fa-star pink"></i>
+                        <i class="fa-solid fa-star pink"></i>
+                        <i class="fa-solid fa-star pink"></i>
+                    </div>
+                    <span>(8 reviews)</span>
+                </div>
+                
+                `;
+                cardLoading.remove();
+                if (cardContainer) {
+                    cardContainer.appendChild(cardItem);
+                }
+
+
+                (0,_getProduct__WEBPACK_IMPORTED_MODULE_1__["default"])({
+                    cardImgSelector: '.card__container .card__img img',
+                    cardPriceSelector: '.card__container .card__new',
+                    cardNameSelector: '.card__container .card__name',
+                });
+
+                (0,_quickView__WEBPACK_IMPORTED_MODULE_2__["default"])({
+                    quickImgSelector: '#product__modal img',
+                    quickHeaderSelector: '#product__modal .product__header h1',
+                    quickPriceSelector: '#product__modal .product__price h1',
+                    quickBtnSelector: '.card__container .card__quick',
+                    cardImgSelector: '.card__container .card__img img',
+                    cardPriceSelector: '.card__container .card__new',
+                    cardNameSelector: '.card__container .card__name'
+                });
+
+                (0,_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('#product__modal', '.card__quick');
+
+
+            });
+
+        });
+
 
 };
 
@@ -387,7 +542,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ quickView)
 /* harmony export */ });
 
-
 function quickView({ quickImgSelector, quickHeaderSelector, quickPriceSelector, quickBtnSelector, cardImgSelector, cardPriceSelector, cardNameSelector }) {
     const quickImg = document.querySelector(quickImgSelector),
         quickHeader = document.querySelector(quickHeaderSelector),
@@ -409,7 +563,6 @@ function quickView({ quickImgSelector, quickHeaderSelector, quickPriceSelector, 
                 });
             });
         };
-
 
     };
 
@@ -645,6 +798,31 @@ function tabs(tabSelector, tabControlSelector, activeTab) {
     showTabs();
 };
 
+/***/ }),
+
+/***/ "./js/services/services.js":
+/*!*********************************!*\
+  !*** ./js/services/services.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+
+const getData = async(url) => {
+    const req = await fetch(url);
+
+    if (!req.ok) {
+        throw new Error(`Could not fetch ${url}`);
+    }
+    return await req.json();
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);
+
 /***/ })
 
 /******/ 	});
@@ -706,9 +884,9 @@ function tabs(tabSelector, tabControlSelector, activeTab) {
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!**********************!*\
-  !*** ./js/script.js ***!
-  \**********************/
+/*!********************!*\
+  !*** ./js/main.js ***!
+  \********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_product__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/product */ "./js/modules/product.js");
 /* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cart */ "./js/modules/cart.js");
@@ -719,6 +897,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_getProduct__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/getProduct */ "./js/modules/getProduct.js");
 /* harmony import */ var _modules_quickView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/quickView */ "./js/modules/quickView.js");
 /* harmony import */ var _modules_quickToCart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/quickToCart */ "./js/modules/quickToCart.js");
+/* harmony import */ var _modules_getAllData__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/getAllData */ "./js/modules/getAllData.js");
+/* harmony import */ var _modules_about__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/about */ "./js/modules/about.js");
+
+
+
 
 
 
@@ -784,6 +967,14 @@ window.addEventListener('DOMContentLoaded', () => {
         countModalSelector: '#product__modal input',
         modalNotfSelector: '#product__modal #add__cart',
         modalNotfHeaderSelector: '#product__modal #add__cart p'
+    });
+
+    (0,_modules_getAllData__WEBPACK_IMPORTED_MODULE_9__["default"])('.card__container', 'card__item');
+
+    (0,_modules_about__WEBPACK_IMPORTED_MODULE_10__["default"])({
+        businessYearSelector: '#businessYear',
+        designBrandsSelector: '#designBrands',
+        teamMembersSelector: '#teamMembers'
     });
 });
 })();

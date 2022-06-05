@@ -1,5 +1,4 @@
 'use strict';
-
 export default function quickView({ quickImgSelector, quickHeaderSelector, quickPriceSelector, quickBtnSelector, cardImgSelector, cardPriceSelector, cardNameSelector }) {
     const quickImg = document.querySelector(quickImgSelector),
         quickHeader = document.querySelector(quickHeaderSelector),
@@ -21,7 +20,6 @@ export default function quickView({ quickImgSelector, quickHeaderSelector, quick
                 });
             });
         };
-
 
     };
 
