@@ -1,13 +1,14 @@
 'use strict';
-import { setSS } from "./storage/current-local";
+import { setLS } from "./storage/current-local";
 export default function getProduct({ cardImgSelector, cardPriceSelector, cardNameSelector }) {
     const cardImg = document.querySelectorAll(cardImgSelector),
         cardPrice = document.querySelectorAll(cardPriceSelector),
         cardName = document.querySelectorAll(cardNameSelector);
 
-    function showCurrentProduct(event) {
-        cardImg.forEach((img, i) => {
-            img.addEventListener(event, e => {
+    function showCurrentProduct(selector) {
+
+        selector.forEach((item, i) => {
+            item.addEventListener('click', e => {
                 e.preventDefault();
                 const newCardPrice = cardPrice[i].textContent.trim().replace(/\$/g, '');
 
@@ -17,15 +18,13 @@ export default function getProduct({ cardImgSelector, cardPriceSelector, cardNam
                     cardPrice: +newCardPrice
                 };
 
-                setSS(currentProduct);
+                setLS(currentProduct);
                 location.href = 'product.html';
             });
         });
+
+
     };
-    const eventArr = ['scroll', 'click'];
 
-    eventArr.forEach(event => {
-        showCurrentProduct(event);
-
-    })
+    showCurrentProduct(cardImg);
 }

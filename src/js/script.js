@@ -6,6 +6,7 @@ import modals from './modules/modals';
 import bag from './modules/bag';
 import slider from './modules/slider';
 import getProduct from './modules/getProduct';
+import quickView from './modules/quickView'
 
 window.addEventListener('DOMContentLoaded', () => {
     product({
@@ -40,7 +41,16 @@ window.addEventListener('DOMContentLoaded', () => {
     getProduct({
         cardImgSelector: '.card__container .card__img img',
         cardPriceSelector: '.card__container .card__new',
+        cardNameSelector: '.card__container .card__name',
+    });
+
+    quickView({
+        quickImgSelector: '#product__modal img',
+        quickHeaderSelector: '#product__modal .product__header h1',
+        quickPriceSelector: '#product__modal .product__price h1',
+        quickBtnSelector: '.card__container .card__quick',
+        cardImgSelector: '.card__container .card__img img',
+        cardPriceSelector: '.card__container .card__new',
         cardNameSelector: '.card__container .card__name'
     })
-
-})
+});

@@ -1,7 +1,7 @@
 'use strict';
 import bag from "./bag";
 import { setLS } from "./storage/product-local";
-import { getSS } from "./storage/current-local";
+import { getLS } from "./storage/current-local";
 export default function({ btnSelector, productHeader, productPrice, productImg, productCount, notfSelector, notfHeaderSelector, productShortImg }) {
     const btn = document.querySelector(btnSelector),
         header = document.querySelector(productHeader),
@@ -13,7 +13,7 @@ export default function({ btnSelector, productHeader, productPrice, productImg, 
         notfHeader = document.querySelector(notfHeaderSelector);
 
     function showProduct() {
-        let products = getSS();
+        let products = getLS();
         if (header && price && img) {
             header.textContent = products.cardName;
             price.textContent = `$${ products.cardPrice}`;

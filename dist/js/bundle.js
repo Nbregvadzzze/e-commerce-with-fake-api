@@ -167,9 +167,10 @@ function getProduct({ cardImgSelector, cardPriceSelector, cardNameSelector }) {
         cardPrice = document.querySelectorAll(cardPriceSelector),
         cardName = document.querySelectorAll(cardNameSelector);
 
-    function showCurrentProduct(event) {
-        cardImg.forEach((img, i) => {
-            img.addEventListener(event, e => {
+    function showCurrentProduct(selector) {
+
+        selector.forEach((item, i) => {
+            item.addEventListener('click', e => {
                 e.preventDefault();
                 const newCardPrice = cardPrice[i].textContent.trim().replace(/\$/g, '');
 
@@ -179,17 +180,15 @@ function getProduct({ cardImgSelector, cardPriceSelector, cardNameSelector }) {
                     cardPrice: +newCardPrice
                 };
 
-                (0,_storage_current_local__WEBPACK_IMPORTED_MODULE_0__.setSS)(currentProduct);
+                (0,_storage_current_local__WEBPACK_IMPORTED_MODULE_0__.setLS)(currentProduct);
                 location.href = 'product.html';
             });
         });
+
+
     };
-    const eventArr = ['scroll', 'click'];
 
-    eventArr.forEach(event => {
-        showCurrentProduct(event);
-
-    })
+    showCurrentProduct(cardImg);
 }
 
 /***/ }),
@@ -271,7 +270,7 @@ __webpack_require__.r(__webpack_exports__);
         notfHeader = document.querySelector(notfHeaderSelector);
 
     function showProduct() {
-        let products = (0,_storage_current_local__WEBPACK_IMPORTED_MODULE_2__.getSS)();
+        let products = (0,_storage_current_local__WEBPACK_IMPORTED_MODULE_2__.getLS)();
         if (header && price && img) {
             header.textContent = products.cardName;
             price.textContent = `$${ products.cardPrice}`;
@@ -316,6 +315,48 @@ __webpack_require__.r(__webpack_exports__);
     addToCart();
     showProduct()
 
+};
+
+/***/ }),
+
+/***/ "./js/modules/quickView.js":
+/*!*********************************!*\
+  !*** ./js/modules/quickView.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ quickView)
+/* harmony export */ });
+
+
+function quickView({ quickImgSelector, quickHeaderSelector, quickPriceSelector, quickBtnSelector, cardImgSelector, cardPriceSelector, cardNameSelector }) {
+    const quickImg = document.querySelector(quickImgSelector),
+        quickHeader = document.querySelector(quickHeaderSelector),
+        quickPrice = document.querySelector(quickPriceSelector),
+        quickBtn = document.querySelectorAll(quickBtnSelector),
+        cardImg = document.querySelectorAll(cardImgSelector),
+        cardPrice = document.querySelectorAll(cardPriceSelector),
+        cardName = document.querySelectorAll(cardNameSelector);
+
+    function setQuickView() {
+
+        if (quickImg && quickHeader && quickPrice) {
+            quickBtn.forEach((item, i) => {
+                item.addEventListener('click', () => {
+                    quickImg.setAttribute('src', cardImg[i].getAttribute('src'));
+                    quickHeader.textContent = cardName[i].textContent.trim();
+                    quickPrice.textContent = cardPrice[i].textContent.trim();
+
+                });
+            });
+        };
+
+
+    };
+
+    setQuickView();
 };
 
 /***/ }),
@@ -408,16 +449,16 @@ function slider({ sliderTopSelector, sliderContainerSelector, sliderItemSelector
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getSS": () => (/* binding */ getSS),
-/* harmony export */   "setSS": () => (/* binding */ setSS)
+/* harmony export */   "getLS": () => (/* binding */ getLS),
+/* harmony export */   "setLS": () => (/* binding */ setLS)
 /* harmony export */ });
 
 
-function setSS(obj) {
+function setLS(obj) {
     localStorage.setItem('currentProduct', JSON.stringify(obj));
 };
 
-function getSS() {
+function getLS() {
     let arr = JSON.parse(localStorage.getItem('currentProduct'));
     return arr;
 };
@@ -619,6 +660,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_bag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/bag */ "./js/modules/bag.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
 /* harmony import */ var _modules_getProduct__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/getProduct */ "./js/modules/getProduct.js");
+/* harmony import */ var _modules_quickView__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/quickView */ "./js/modules/quickView.js");
+
 
 
 
@@ -661,10 +704,19 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_getProduct__WEBPACK_IMPORTED_MODULE_6__["default"])({
         cardImgSelector: '.card__container .card__img img',
         cardPriceSelector: '.card__container .card__new',
+        cardNameSelector: '.card__container .card__name',
+    });
+
+    (0,_modules_quickView__WEBPACK_IMPORTED_MODULE_7__["default"])({
+        quickImgSelector: '#product__modal img',
+        quickHeaderSelector: '#product__modal .product__header h1',
+        quickPriceSelector: '#product__modal .product__price h1',
+        quickBtnSelector: '.card__container .card__quick',
+        cardImgSelector: '.card__container .card__img img',
+        cardPriceSelector: '.card__container .card__new',
         cardNameSelector: '.card__container .card__name'
     })
-
-})
+});
 })();
 
 /******/ })()
