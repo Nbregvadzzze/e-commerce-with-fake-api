@@ -2,6 +2,30 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./js/modules/bag.js":
+/*!***************************!*\
+  !*** ./js/modules/bag.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ bag)
+/* harmony export */ });
+/* harmony import */ var _storage_localstorage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage/localstorage */ "./js/modules/storage/localstorage.js");
+
+
+
+function bag(bagCount) {
+    const bag = document.querySelector(bagCount),
+        products = (0,_storage_localstorage__WEBPACK_IMPORTED_MODULE_0__.getLS)();
+
+    bag.textContent = products.length;
+
+}
+
+/***/ }),
+
 /***/ "./js/modules/cart.js":
 /*!****************************!*\
   !*** ./js/modules/cart.js ***!
@@ -408,6 +432,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/cart */ "./js/modules/cart.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modals */ "./js/modules/modals.js");
+/* harmony import */ var _modules_bag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/bag */ "./js/modules/bag.js");
+
 
 
 
@@ -419,7 +445,8 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_cart__WEBPACK_IMPORTED_MODULE_1__["default"])('.shopping tbody', '.cart__data-subtotal h4', '.cart__data-total h2', '.cart__data-product');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('#cart .tab', '#cart .tabControl', 'activeTab');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('#product__details .tab', '#product__details .tabControl', 'activeArea');
-    (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('#product__modal', '.card__quick')
+    (0,_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])('#product__modal', '.card__quick');
+    (0,_modules_bag__WEBPACK_IMPORTED_MODULE_4__["default"])('.bagCount');
 })
 })();
 
