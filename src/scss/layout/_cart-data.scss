@@ -47,7 +47,6 @@
     }
     span {
         @include flex-start-center();
-        display: block;
         line-height: $line-m;
         input {
             margin: 2px 10px 5px 0;
