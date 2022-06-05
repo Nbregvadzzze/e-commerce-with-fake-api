@@ -10,14 +10,14 @@ import quickView from './modules/quickView'
 
 window.addEventListener('DOMContentLoaded', () => {
     product({
-        btnSelector: '.product__add a',
-        productHeader: '.product__header h1',
-        productPrice: '.product__price h1',
-        productImg: '.product__slider-container img',
+        btnSelector: '#product .product__add a',
+        productHeader: '#product .product__header h1',
+        productPrice: '#product .product__price h1',
+        productImg: '#product .product__slider-container img',
         productCount: '.product__add input',
         notfSelector: '#add__cart',
         notfHeaderSelector: '#add__cart p',
-        productShortImg: '.product__left .product__img-short'
+        productShortImg: '#product .product__left .product__img-short'
     });
     cart({
         cartContainerSelector: '.shopping tbody',

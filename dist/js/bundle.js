@@ -290,7 +290,7 @@ __webpack_require__.r(__webpack_exports__);
                 e.preventDefault();
                 const priceInt = price.textContent.replace(/\$/i, '');
                 const total = priceInt * ~~count.value;
-
+                console.log(e.target);
                 const product = {
                     header: header.textContent,
                     price: priceInt,
@@ -673,14 +673,14 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_product__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        btnSelector: '.product__add a',
-        productHeader: '.product__header h1',
-        productPrice: '.product__price h1',
-        productImg: '.product__slider-container img',
+        btnSelector: '#product .product__add a',
+        productHeader: '#product .product__header h1',
+        productPrice: '#product .product__price h1',
+        productImg: '#product .product__slider-container img',
         productCount: '.product__add input',
         notfSelector: '#add__cart',
         notfHeaderSelector: '#add__cart p',
-        productShortImg: '.product__left .product__img-short'
+        productShortImg: '#product .product__left .product__img-short'
     });
     (0,_modules_cart__WEBPACK_IMPORTED_MODULE_1__["default"])({
         cartContainerSelector: '.shopping tbody',
