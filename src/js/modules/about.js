@@ -5,9 +5,8 @@ export default function about({ businessYearSelector, designBrandsSelector, team
         designBrands = document.querySelector(designBrandsSelector),
         teamMembers = document.querySelector(teamMembersSelector)
 
-    let i = 0;
-
-    if (i) {
+    if (businessYear && designBrands && teamMembers) {
+        let i = 1;
         setInterval(() => {
             i += 1;
 
@@ -15,7 +14,7 @@ export default function about({ businessYearSelector, designBrandsSelector, team
                 businessYear.textContent = `${i}+`
             }
 
-            if (i <= 30) {
+            if (i <= 70) {
                 designBrands.textContent = `${i}+`
 
             }
@@ -26,4 +25,5 @@ export default function about({ businessYearSelector, designBrandsSelector, team
             }
         }, 30)
     }
+
 }
